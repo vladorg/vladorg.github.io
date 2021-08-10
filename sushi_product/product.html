@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/libs/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/libs/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="css/style.min.css" data-style="main">
+</head>
+
+<body class="column">
+  <header class="header">
+    <div class="header__top">
+      <div class="container header__toolbar">
+        <div class="header__contacts">
+          <a href="tel:380681228583" class="ic-phone">+38 (068) 122-85-83</a>
+          <a href="mailto:info@sushi-product.com" class="ic-mail">info@sushi-product.com</a>
+        </div>
+        <ul class="header__links">
+          <li><a href="./delivery.html">Оплата і доставка</a></li>
+          <li><a href="#" class="open_callback">Передзвоніть мені</a></li>
+          <li><a href="#" class="open_review_manager">Відгук</a></li>
+        </ul>
+        <div class="header__languages">
+          <a href="#" class="header__lang header__lang--active">УКР</a>
+          <a href="#" class="header__lang">РУС</a>
+          <a href="#" class="header__lang">ENG</a>
+        </div>
+        <div class="header__socials">
+          <a href="#" class="ic-facebook" target="_blank"></a>
+          <a href="#" class="ic-instagram" target="_blank"></a>
+          <a href="#" class="ic-telegram" target="_blank"></a>
+        </div>
+      </div>
+    </div>
+    <div class="header__inner">
+      <div class="container">
+        <div class="header__center">
+          <a href="./index.html" class="header__logo">
+            <img src="img/logo.svg" class="header__logoDefault" alt="Logo">
+            <img src="img/logo-white.svg" class="header__logoWhite" alt="Logo">
+          </a>
+          <form action="#" class="header__search">
+            <label class="ic-search" for="header_search"></label>
+            <input class="placeholder" name="search" type="text" id="header_search"
+              placeholder="Бiльш 1 000 товарiв....">
+            <button class="btn">Пошук</button>
+          </form>
+          <div class="header__tools">
+  
+            <div class="header__tool header__tool--auth header__tool--logged ic-user open_logged">
+              <a href="#" class="arrow">Особистий кабінет</a>
+              <div class="headerDropdown logged">
+                <ul>
+                  <li><a href="./account.html">Особиста iнформацiя</a></li>
+                  <li><a href="./wishlist.html">Список обраного</a></li>
+                  <li><a href="./orders.html">Iсторiя заказiв</a></li>
+                  <li><a href="./bonus.html">Мій бонусний рахунок</a></li>
+                  <li><a href="#">Вийти iз аккаунта</a></li>
+                </ul>
+              </div>
+            </div>
+  
+            <button class="btn ic-search-big header__searchMobile open_search"></button>
+  
+            <div class="header__tool header__tool--wish open_wish ic-heart">
+              <div class="header__toolName">В обраному</div>
+              <div class="header__toolCount"><span>5</span> товаров</div>
+              <div class="headerDropdown wishlist" data-empty="Нет товаров!">
+                <div class="headerDropdown__items scroll scroll--radius">
+                  <div class="headerDropdown__item" data-deleted="Товар видалений!">
+                    <img src="img/products/3.png" class="headerDropdown__thumb" alt="">
+                    <div class="headerDropdown__caption">
+                      <a href="./product.html" class="headerDropdown__name">Сир-крем Hochland вершковий
+                        60% жиру, 200г</a>
+                      <div class="headerDropdown__price">589 грн</div>
+                    </div>
+                    <button class="btn ic-trash headerDropdown__del cartContentProducts__del"></button>
+                  </div>
+                  <div class="headerDropdown__item" data-deleted="Товар видалений!">
+                    <img src="img/products/1.png" class="headerDropdown__thumb" alt="">
+                    <div class="headerDropdown__caption">
+                      <a href="./product.html" class="headerDropdown__name">Борошно Хуторок пшеничне,
+                        фасоване, 1 кг</a>
+                      <div class="headerDropdown__price">589 грн</div>
+                    </div>
+                    <button class="btn ic-trash headerDropdown__del cartContentProducts__del"></button>
+                  </div>
+                  <div class="headerDropdown__item" data-deleted="Товар видалений!">
+                    <img src="img/products/3.png" class="headerDropdown__thumb" alt="">
+                    <div class="headerDropdown__caption">
+                      <a href="./product.html" class="headerDropdown__name">Сир-крем Hochland вершковий
+                        60% жиру, 200г</a>
+                      <div class="headerDropdown__price">589 грн</div>
+                    </div>
+                    <button class="btn ic-trash headerDropdown__del cartContentProducts__del"></button>
+                  </div>
+                  <div class="headerDropdown__item" data-deleted="Товар видалений!">
+                    <img src="img/products/3.png" class="headerDropdown__thumb" alt="">
+                    <div class="headerDropdown__caption">
+                      <a href="./product.html" class="headerDropdown__name">Сир-крем Hochland вершковий
+                        60% жиру, 200г</a>
+                      <div class="headerDropdown__price">589 грн</div>
+                    </div>
+                    <button class="btn ic-trash headerDropdown__del cartContentProducts__del"></button>
+                  </div>
+                  <div class="headerDropdown__item" data-deleted="Товар видалений!">
+                    <img src="img/products/1.png" class="headerDropdown__thumb" alt="">
+                    <div class="headerDropdown__caption">
+                      <a href="./product.html" class="headerDropdown__name">Борошно Хуторок пшеничне,
+                        фасоване, 1 кг</a>
+                      <div class="headerDropdown__price">589 грн</div>
+                    </div>
+                    <button class="btn ic-trash headerDropdown__del cartContentProducts__del"></button>
+                  </div>
+                  <div class="headerDropdown__item" data-deleted="Товар видалений!">
+                    <img src="img/products/3.png" class="headerDropdown__thumb" alt="">
+                    <div class="headerDropdown__caption">
+                      <a href="./product.html" class="headerDropdown__name">Сир-крем Hochland вершковий
+                        60% жиру, 200г</a>
+                      <div class="headerDropdown__price">589 грн</div>
+                    </div>
+                    <button class="btn ic-trash headerDropdown__del cartContentProducts__del"></button>
+                  </div>
+                </div>
+                <div class="headerDropdown__bottom">
+                  <a href="./wishlist.html" class="btn btn--primary">Перейти до обраного</a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="header__tool header__tool--cart open_cart ic-cart" data-link="./cart.html">
+              <!-- data-link value is required for redirecting to cart page on mobile devices -->
+  
+              <div class="header__toolName">У кошику</div>
+              <div class="header__toolCount"><span>0</span> товаров</div>
+              <div class="headerDropdown cart" data-empty="Ваша корзина пустая!">
+                <div class="headerDropdown__items scroll scroll--radius">
+                  <div class="headerDropdown__item" data-deleted="Товар видалений!">
+                    <img src="img/products/3.png" class="headerDropdown__thumb" alt="">
+                    <div class="headerDropdown__caption">
+                      <a href="./product.html" class="headerDropdown__name">Сир-крем Hochland вершковий
+                        60% жиру, 200г</a>
+                      <div class="headerDropdown__price">589 грн</div>
+                    </div>
+                    <button class="btn ic-trash headerDropdown__del cartContentProducts__del"></button>
+                  </div>
+                  <div class="headerDropdown__item" data-deleted="Товар видалений!">
+                    <img src="img/products/1.png" class="headerDropdown__thumb" alt="">
+                    <div class="headerDropdown__caption">
+                      <a href="./product.html" class="headerDropdown__name">Борошно Хуторок пшеничне,
+                        фасоване, 1 кг</a>
+                      <div class="headerDropdown__price">589 грн</div>
+                    </div>
+                    <button class="btn ic-trash headerDropdown__del cartContentProducts__del"></button>
+                  </div>
+                  <div class="headerDropdown__item" data-deleted="Товар видалений!">
+                    <img src="img/products/3.png" class="headerDropdown__thumb" alt="">
+                    <div class="headerDropdown__caption">
+                      <a href="./product.html" class="headerDropdown__name">Сир-крем Hochland вершковий
+                        60% жиру, 200г</a>
+                      <div class="headerDropdown__price">589 грн</div>
+                    </div>
+                    <button class="btn ic-trash headerDropdown__del cartContentProducts__del"></button>
+                  </div>
+                  <div class="headerDropdown__item" data-deleted="Товар видалений!">
+                    <img src="img/products/3.png" class="headerDropdown__thumb" alt="">
+                    <div class="headerDropdown__caption">
+                      <a href="./product.html" class="headerDropdown__name">Сир-крем Hochland вершковий
+                        60% жиру, 200г</a>
+                      <div class="headerDropdown__price">589 грн</div>
+                    </div>
+                    <button class="btn ic-trash headerDropdown__del cartContentProducts__del"></button>
+                  </div>
+                  <div class="headerDropdown__item" data-deleted="Товар видалений!">
+                    <img src="img/products/1.png" class="headerDropdown__thumb" alt="">
+                    <div class="headerDropdown__caption">
+                      <a href="./product.html" class="headerDropdown__name">Борошно Хуторок пшеничне,
+                        фасоване, 1 кг</a>
+                      <div class="headerDropdown__price">589 грн</div>
+                    </div>
+                    <button class="btn ic-trash headerDropdown__del cartContentProducts__del"></button>
+                  </div>
+                  <div class="headerDropdown__item" data-deleted="Товар видалений!">
+                    <img src="img/products/3.png" class="headerDropdown__thumb" alt="">
+                    <div class="headerDropdown__caption">
+                      <a href="./product.html" class="headerDropdown__name">Сир-крем Hochland вершковий
+                        60% жиру, 200г</a>
+                      <div class="headerDropdown__price">589 грн</div>
+                    </div>
+                    <button class="btn ic-trash headerDropdown__del cartContentProducts__del"></button>
+                  </div>
+                </div>
+                <div class="headerDropdown__bottom">
+                  <div class="headerDropdown__total headerDropdown__total--commerce">
+                    <div class="cart__total">Разом:</div>
+                    <div class="cart__price">838,54 грн</div>
+                  </div>
+                  <a href="./checkout.html" class="btn btn--primary">Оформити замовлення</a>
+                  <a href="./cart.html" class="btn btn--dashed">Перейти до кошика</a>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+          <button class="btn ic-burger header__burger open_mobile"></button>
+        </div>
+        <div class="header__bottom">
+          <div class="catalog">
+            <button class="btn btn--primary catalog__btn ic-catalog">Каталог</button>
+            <div class="catalog__wrap scroll scroll--radius">
+              <nav class="catalog__menu">
+                <ul class="catalog__products">
+                  <li class="catalog__link">
+                    <a href="./catalog.html">Бакалея</a>
+                  </li>
+                  <li class="catalog__link catalog__link--parent arrow">
+                    <a href="./catalog.html">Мука i панiровка</a>
+                    <ul class="catalog__child">
+                      <li>
+                        <a href="./catalog2.html">Мука i панiровка 1</a>
+                      </li>
+                      <li>
+                        <a href="./catalog2.html">Мука i панiровка 2</a>
+                      </li>
+                      <li>
+                        <a href="./catalog2.html">Мука i панiровка 3</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="catalog__link catalog__link--parent arrow">
+                    <a href="./catalog.html">Водорослi та гриби</a>
+                    <ul class="catalog__child">
+                      <li>
+                        <a href="./catalog2.html">Норi</a>
+                      </li>
+                      <li>
+                        <a href="./catalog2.html">Водорослi</a>
+                      </li>
+                      <li>
+                        <a href="./catalog2.html">Гриби</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="catalog__link">
+                    <a href="./catalog.html">Васабi</a>
+                  </li>
+                  <li class="catalog__link">
+                    <a href="./catalog.html">iмбир</a>
+                  </li>
+                  <li class="catalog__link">
+                    <a href="./catalog.html">Уксус</a>
+                  </li>
+                  <li class="catalog__link catalog__link--parent arrow">
+                    <a href="./catalog.html">iкра</a>
+                    <ul class="catalog__child">
+                      <li>
+                        <a href="./catalog2.html">iкра 1</a>
+                      </li>
+                      <li>
+                        <a href="./catalog2.html">iкра 2</a>
+                      </li>
+                      <li>
+                        <a href="./catalog2.html">iкра 3</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="catalog__link catalog__link--parent arrow">
+                    <a href="./catalog.html">Лапша</a>
+                    <ul class="catalog__child">
+                      <li>
+                        <a href="./catalog2.html">Лапша 1</a>
+                      </li>
+                      <li>
+                        <a href="./catalog2.html">Лапша 2</a>
+                      </li>
+                      <li>
+                        <a href="./catalog2.html">Лапша 3</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="catalog__link">
+                    <a href="./catalog.html">Морепродукти</a>
+                  </li>
+                  <li class="catalog__link">
+                    <a href="./catalog.html">Рис</a>
+                  </li>
+                  <li class="catalog__link catalog__link--parent arrow">
+                    <a href="./catalog.html">Риба</a>
+                    <ul class="catalog__child">
+                      <li>
+                        <a href="./catalog2.html">Риба 1</a>
+                      </li>
+                      <li>
+                        <a href="./catalog2.html">Риба 2</a>
+                      </li>
+                      <li>
+                        <a href="./catalog2.html">Риба 3</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="catalog__link">
+                    <a href="./catalog.html">Сопутнi товари</a>
+                  </li>
+                  <li class="catalog__link">
+                    <a href="./catalog.html">Соуси</a>
+                  </li>
+                  <li class="catalog__link">
+                    <a href="./catalog.html">Сири та сливки</a>
+                  </li>
+                  <li class="catalog__link">
+                    <a href="./catalog.html">Фасована продукцiя</a>
+                  </li>
+                </ul>
+                <ul class="catalog__pages">
+                  <li class="catalog__link">
+                    <a href="#">Акцiя</a>
+                  </li>
+                  <li class="catalog__link">
+                    <a href="#">Новинки</a>
+                  </li>
+                  <li class="catalog__link">
+                    <a href="#">Особисте виробництво</a>
+                  </li>
+                  <li class="catalog__link">
+                    <a href="#">Эксклюзив</a>
+                  </li>
+                  <li class="catalog__link">
+                    <a href="#">Актуальне</a>
+                  </li>
+                  <li class="catalog__link catalog__link--parent arrow">
+                    <a href="#">Подборки</a>
+                    <ul class="catalog__child">
+                      <li>
+                        <a href="./catalog2.html">Подборки 1</a>
+                      </li>
+                      <li>
+                        <a href="./catalog2.html">Подборки 2</a>
+                      </li>
+                      <li>
+                        <a href="./catalog2.html">Подборки 3</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <a href="#" class="catalog__bannerWrap">
+                <img src="img/banners/catalog.jpg" alt="" class="catalog__banner">
+              </a>
+            </div>
+          </div>
+          <ul class="header__nav">
+            <li>
+              <a href="./about.html">Про компанію</a>
+            </li>
+            <li>
+              <a href="./partners.html">Співробітництво</a>
+            </li>
+            <li>
+              <a href="./blog.html">Блог</a>
+            </li>
+            <li>
+              <a href="./carrier.html">Кар'єра</a>
+            </li>
+            <li>
+              <a href="./contacts.html">Контакти</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <main class="main productPage">
+
+      <section class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item breadcrumbs__item--start">
+              <a href="./index.html" class="ic-home">Головна</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="./catalog.html">Каталог товарiв</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="./catalog.html">Водорослi та гриби</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="./catalog2.html">Ворослi</a>
+            </li>
+            <li class="breadcrumbs__item breadcrumbs__item--end">Ворослi Норi “SUSHI NORI”</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section productPageMain">
+        <div class="container">
+          <div class="productPageImages">
+            <div class="preview__stickers">
+              <div class="preview__sticker preview__sticker--green">Актуальне</div>
+              <div class="preview__sticker preview__sticker--exc">Эксклюзив</div>
+            </div>
+
+            <div class="swiper-container productPageImages__top">
+              <div class="swiper-wrapper">
+                <a class="swiper-slide" data-fancybox="gallery" href="./img/products/5.png">
+                  <img src="./img/products/5.png">
+                </a>
+                <a class="swiper-slide" data-fancybox="gallery" href="./img/products/5.png">
+                  <img src="./img/products/5.png">
+                </a>
+                <a class="swiper-slide" data-fancybox="gallery" href="./img/products/5.png">
+                  <img src="./img/products/5.png">
+                </a>
+                <a class="swiper-slide" data-fancybox="gallery" href="./img/products/5.png">
+                  <img src="./img/products/5.png">
+                </a>
+                <a class="swiper-slide" data-fancybox="gallery" href="./img/products/5.png">
+                  <img src="./img/products/5.png">
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-container productPageImages__bottom">
+              <div class="swiper-wrapper">
+                <img class="swiper-slide" src="./img/products/5.png" alt="">
+                <img class="swiper-slide" src="./img/products/5.png" alt="">
+                <img class="swiper-slide" src="./img/products/5.png" alt="">
+                <img class="swiper-slide" src="./img/products/5.png" alt="">
+                <img class="swiper-slide" src="./img/products/5.png" alt="">
+              </div>
+            </div>
+
+          </div>
+          <div class="productPageInfo">
+            <h1 class="productPageInfo__title">Бульйон “Хондашi” рибний 1,0 л (Китай)</h1>
+            <div class="productPageInfo__info">
+              <span class="productPageInfo__code">Код: 3355</span>
+              <div class="productPageInfo__rows scroll">
+                <div class="productPageInfo__row">
+                  <span>Країна походження</span>
+                  <span>Китай</span>
+                </div>
+                <div class="productPageInfo__row">
+                  <span>Упаковка</span>
+                  <span>Коробка, 2 пакети по 0,5 кг</span>
+                </div>
+                <div class="productPageInfo__row">
+                  <span>Вага 1 уп</span>
+                  <span>1 кг</span>
+                </div>
+                <div class="productPageInfo__row">
+                  <span>Кількість в груповій упаковці</span>
+                  <span>10 шт(10 кг)</span>
+                </div>
+                <div class="productPageInfo__row">
+                  <span>Готовність продукції</span>
+                  <span>Концентрат</span>
+                </div>
+                <div class="productPageInfo__row">
+                  <span>Термін придатності</span>
+                  <span>18 мiсяцiв</span>
+                </div>
+                <div class="productPageInfo__row">
+                  <span>Країна походження</span>
+                  <span>Китай</span>
+                </div>
+                <div class="productPageInfo__row">
+                  <span>Упаковка</span>
+                  <span>Коробка, 2 пакети по 0,5 кг</span>
+                </div>
+                <div class="productPageInfo__row">
+                  <span>Вага 1 уп</span>
+                  <span>1 кг</span>
+                </div>
+                <div class="productPageInfo__row">
+                  <span>Кількість в груповій упаковці</span>
+                  <span>10 шт(10 кг)</span>
+                </div>
+                <div class="productPageInfo__row">
+                  <span>Готовність продукції</span>
+                  <span>Концентрат</span>
+                </div>
+                <div class="productPageInfo__row">
+                  <span>Термін придатності</span>
+                  <span>18 мiсяцiв</span>
+                </div>
+                <div class="productPageInfo__row">
+                  <span>Країна походження</span>
+                  <span>Китай</span>
+                </div>
+                <div class="productPageInfo__row">
+                  <span>Упаковка</span>
+                  <span>Коробка, 2 пакети по 0,5 кг</span>
+                </div>
+                <div class="productPageInfo__row">
+                  <span>Вага 1 уп</span>
+                  <span>1 кг</span>
+                </div>
+                <div class="productPageInfo__row">
+                  <span>Кількість в груповій упаковці</span>
+                  <span>10 шт(10 кг)</span>
+                </div>
+                <div class="productPageInfo__row">
+                  <span>Готовність продукції</span>
+                  <span>Концентрат</span>
+                </div>
+                <div class="productPageInfo__row">
+                  <span>Термін придатності</span>
+                  <span>18 мiсяцiв</span>
+                </div>
+              </div>
+              <button class="btn productPageInfo__more">Дивитися ще</button>
+            </div>
+            <div class="productPageCheckout">
+
+              <!-- if logged -->
+              <button class="btn ic-heart-grey productPageCheckout__wish"></button>
+              <!-- else -->
+              <!-- <button class="btn ic-heart-grey productPageCheckout__wish open_auth"></button> -->
+              <!-- endif -->
+
+              <div class="productPageCheckout__priceWrap">
+                <span class="productPageCheckout__price">305 грн</span>
+                <span class="productPageCheckout__min">Минiмальне замовлення 4 шт
+                  <div class="tooltip tooltip--preview tooltip--short">
+                    <div class="tooltip__pick">?</div>
+                    <div class="tooltip__wrap">
+                      <div class="tooltip__content scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Sequi a
+                        commodi fuga quaerat qui suscipit nam quae soluta laborum quam!</div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+              <div class="productPageCheckout__tools">
+                <div class="quantly">
+                  <span class="quantly__label">Кiлькiсть:</span>
+                  <div class="quantly__inner">
+                    <button class="btn quantly__button quantly__plus"></button>
+                    <input type="text" name="quantly" class="quantly__input" value="1">
+                    <button class="btn quantly__button quantly__minus"></button>
+                  </div>
+                </div>
+                <button class="btn btn--primary ic-cart-white preview__buy productPageCheckout__buy" data-added="У кошику">В кошик</button>
+              </div>
+              <div class="productPageCheckout__drops accordion">
+                <div class="accordion__item accordion__item--open">
+                  <div class="accordion__title arrow"><i class="ic-box-black"></i>Умови вартості замовлення:</div>
+                  <div class="accordion__content">
+                    <div class="productPageInfo__row">
+                      <span>от 4 шт</span>
+                      <span>100грн/шт</span>
+                    </div>
+                    <div class="productPageInfo__row">
+                      <span>от 10 шт</span>
+                      <span>95грн/шт</span>
+                    </div>
+                    <div class="productPageInfo__row">
+                      <span>от 15 шт</span>
+                      <span>90грн/шт</span>
+                    </div>
+                    <div class="productPageInfo__row">
+                      <span>от 20 шт</span>
+                      <span>85грн/шт</span>
+                    </div>
+                    <div class="productPageInfo__row">
+                      <span>от 50 шт</span>
+                      <span>80грн/шт</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__item">
+                  <div class="accordion__title arrow"><i class="ic-truck"></i>Умови доставки:</div>
+                  <div class="accordion__content">
+                    <div class="productPageInfo__row">
+                      <span>от 4 шт</span>
+                      <span>100грн/шт</span>
+                    </div>
+                    <div class="productPageInfo__row">
+                      <span>от 10 шт</span>
+                      <span>95грн/шт</span>
+                    </div>
+                    <div class="productPageInfo__row">
+                      <span>от 15 шт</span>
+                      <span>90грн/шт</span>
+                    </div>
+                    <div class="productPageInfo__row">
+                      <span>от 20 шт</span>
+                      <span>85грн/шт</span>
+                    </div>
+                    <div class="productPageInfo__row">
+                      <span>от 50 шт</span>
+                      <span>80грн/шт</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__item">
+                  <div class="accordion__title arrow"><i class="ic-card"></i>Умови оплати:</div>
+                  <div class="accordion__content">
+                    <div class="productPageInfo__row">
+                      <span>от 4 шт</span>
+                      <span>100грн/шт</span>
+                    </div>
+                    <div class="productPageInfo__row">
+                      <span>от 10 шт</span>
+                      <span>95грн/шт</span>
+                    </div>
+                    <div class="productPageInfo__row">
+                      <span>от 15 шт</span>
+                      <span>90грн/шт</span>
+                    </div>
+                    <div class="productPageInfo__row">
+                      <span>от 20 шт</span>
+                      <span>85грн/шт</span>
+                    </div>
+                    <div class="productPageInfo__row">
+                      <span>от 50 шт</span>
+                      <span>80грн/шт</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section productPageTabs productsSlider primary-bg">
+        <div class="container">
+
+          <div class="section__heading">
+            <div class="section__titles">
+              <div class="section__title heading">Про продукт</div>
+            </div>
+            <div class="productsSlider__buttons">
+              <button class="btn productsSlider__btn productsSlider__btn--active"
+                data-tab="description">Опис</button>
+              <button class="btn productsSlider__btn" data-tab="cooking">Особливості приготування</button>
+              <button class="btn productsSlider__btn" data-tab="recipes">Рецепти</button>
+            </div>
+          </div>
+
+          <div class="productPageTabs__tabs productsSlider__tabs">
+            <div
+              class="productPageTabs__tab productPageDescription productsSlider__tabWrap productsSlider__tabWrap--active"
+              data-tab="description">
+              <p><strong>Хондаши</strong> - це традиційний японський рибний бульйон. Виготовлений у вигляді сухих
+                гранульованих кульок. У складі містить водорості Комбу та сушений тунець.</p>
+              <ul class="list-check">
+                <li>Економічна витрата</li>
+                <li>Натуральні інгридієнти</li>
+                <li>Виражений смак та аромат копченої риби</li>
+              </ul>
+              <p>У японській кухні:</p>
+              <ul class="list-check">
+                <li>У супах</li>
+                <li>У соусах</li>
+                <li>Як приправа для гарячих страв</li>
+              </ul>
+            </div>
+            <div class="productPageTabs__tab productPageCooking productsSlider__tabWrap" data-tab="cooking">
+              <p>Як приготувати бульйон? Дуже легко! <br> 30 г гранул Хондаши беремо на 1 л води та кип'ятимо 5 хвилин
+                на повільному вогні.</p>
+            </div>
+            <div class="productPageTabs__tab productPageRecipes productsSlider__tabWrap" data-tab="recipes">
+              <div class="heading productPageRecipes__title">Рецепты популярных блюд и этим продуктом</div>
+              <button
+                class="btn ic-arrow-disable sliderArrows__arrow sliderArrows__prev sliderArrows__prev--recipes"></button>
+              <div class="itemsSlider swiper-container">
+                <div class="swiper-wrapper items">
+                  <div class="items__item swiper-slide">
+                    <div class="items__col items__colFirst">
+                      <a href="./article.html">
+                        <img src="./img/product-recipes/recipe1.jpg" alt="">
+                      </a>
+                      <div class="recipes__rate ic-star">4.5</div>
+                    </div>
+                    <div class="items__col items__colSecond">
+                      <div class="heading">Мисо суп</div>
+                      <div class="recipes__categories">
+                        <a href="#">РЕЦЕПТI</a>
+                        <a href="#">СУП</a>
+                        <a href="#">АЗIАТСЬКА КУХНЯ</a>
+                      </div>
+                    </div>
+                    <div class="items__col items__colThird">
+                      <p>Місосіру - блюдо японської кухні, суп з розчиненою в ньому пастою місо. До складу супу включається
+                        безліч другорядних інгредієнтів, їх набір залежить від регіону і сезону.</p>
+                    </div>
+                    <div class="items__col items__colFourth">
+                      <a href="./article.html" class="btn btn--primary items__btn">Докладніше</a>
+                    </div>
+                  </div>
+                  <div class="items__item swiper-slide">
+                    <div class="items__col items__colFirst">
+                      <a href="./article.html">
+                        <img src="./img/product-recipes/recipe2.jpg" alt="">
+                      </a>
+                      <div class="recipes__rate ic-star">5.0</div>
+                    </div>
+                    <div class="items__col items__colSecond">
+                      <div class="heading">Роллы «Филадельфия»</div>
+                      <div class="recipes__categories">
+                        <a href="#">РЕЦЕПТI</a>
+                        <a href="#">СУП</a>
+                        <a href="#">АЗIАТСЬКА КУХНЯ</a>
+                      </div>
+                    </div>
+                    <div class="items__col items__colThird">
+                      <p>Ролл «Філадельфія» - різновид суші, звичайно зроблені з копченого лосося, вершкового сиру
+                        і
+                        огірка. Вони також можуть включати в себе інші інгредієнти, такі як інші види риби, авокадо,
+                        зелену цибулю і насіння кунжуту.</p>
+                    </div>
+                    <div class="items__col items__colFourth">
+                      <a href="./article.html" class="btn btn--primary items__btn">Докладніше</a>
+                    </div>
+                  </div>
+                  <div class="items__item swiper-slide">
+                    <div class="items__col items__colFirst">
+                      <a href="./article.html">
+                        <img src="./img/product-recipes/recipe3.jpg" alt="">
+                      </a>
+                      <div class="recipes__rate ic-star">4.5</div>
+                    </div>
+                    <div class="items__col items__colSecond">
+                      <div class="heading">Салат з креветками</div>
+                      <div class="recipes__categories">
+                        <a href="#">РЕЦЕПТИ</a>
+                        <a href="#">СУП</a>
+                        <a href="#">АЗIАТСЬКА КУХНЯ</a>
+                      </div>
+                    </div>
+                    <div class="items__col items__colThird">
+                      <p>Немає нічого смачнішого, ніж легкий, але одночасно живильний салат. Салат з креветками і
+                        кунжутом
+                        відмінно підійде для обіду або вечері.</p>
+                    </div>
+                    <div class="items__col items__colFourth">
+                      <a href="./article.html" class="btn btn--primary items__btn">Докладніше</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="btn ic-arrow-disable sliderArrows__arrow sliderArrows__next sliderArrows__next--recipes sliderArrows__arrow--active"></button>
+            </div>
+          </div>
+      </section>
+
+      <section class="section productsSlider related">
+        <div class="container">
+
+          <div class="section__heading">
+            <div class="section__titles">
+              <div class="section__title heading">Разом з цим товаром купують</div>
+              <a href="./catalog.html" class="section__link">Переглянути все</a>
+            </div>
+          </div>
+
+          <div class="related__wrap">
+            <button class="btn ic-arrow-disable sliderArrows__arrow sliderArrows__prev sliderArrows__prev--related"></button>
+            <div class="related__slider swiper-container">
+              <div class="products swiper-wrapper">
+                <div class="preview swiper-slide">
+                  <div class="preview__stickers">
+                    <div class="preview__sticker preview__sticker--new">Новинка</div>
+                    <div class="preview__sticker preview__sticker--exc">Эксклюзив</div>
+                  </div>
+                  <button class="btn ic-heart-grey preview__wish open_auth"></button>
+                  <a href="./product.html">
+                    <img src="./img/products/1.png" alt="" class="preview__thumb">
+                  </a>
+                  <div class="preview__art">Код: 12213354</div>
+                  <a href="./product.html" class="preview__name">1Борошно Хуторок пшеничне, фасоване, 1 кг</a>
+                  <div class="preview__info">
+                    <div class="preview__infoTitle">
+                      Мін. Замовлення:
+                      <span class="preview__infoValue">6 кг</span>
+                      <div class="tooltip tooltip--preview tooltip--short">
+                        <div class="tooltip__pick">?</div>
+                        <div class="tooltip__wrap">
+                          <div class="tooltip__content scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Sequi a
+                            commodi fuga quaerat qui suscipit nam quae soluta laborum quam!</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview__bottom">
+                    <div class="preview__price">
+                      <span>124,00 грн</span>
+                      <!-- if special -->
+                      <span class="preview__special">235,70 грн</span>
+                      <!-- endif -->
+                    </div>
+                    <button class="btn btn--primary ic-cart-white preview__buy" data-added="У кошику">В кошик</button>
+                  </div>
+                </div>
+                <div class="preview swiper-slide">
+                  <div class="preview__stickers">
+                    <div class="preview__sticker preview__sticker--new">Новинка</div>
+                    <div class="preview__sticker preview__sticker--exc">Эксклюзив</div>
+                  </div>
+                  <button class="btn ic-heart-grey preview__wish open_auth"></button>
+                  <a href="./product.html">
+                    <img src="./img/products/2.png" alt="" class="preview__thumb">
+                  </a>
+                  <div class="preview__art">Код: 12213354</div>
+                  <a href="./product.html" class="preview__name">Водорості Katana Норі 5 листів</a>
+                  <div class="preview__info">
+                    <div class="preview__infoTitle">
+                      Мін. Замовлення:
+                      <span class="preview__infoValue">10 уп</span>
+                      <div class="tooltip tooltip--preview tooltip--short">
+                        <div class="tooltip__pick">?</div>
+                        <div class="tooltip__wrap">
+                          <div class="tooltip__content scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Sequi a
+                            commodi fuga quaerat qui suscipit nam quae soluta laborum quam!</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview__bottom">
+                    <div class="preview__price">
+                      <span>48,49 грн</span>
+                    </div>
+                    <button class="btn btn--primary ic-cart-white preview__buy" data-added="У кошику">В кошик</button>
+                  </div>
+                </div>
+                <div class="preview swiper-slide">
+                  <div class="preview__stickers">
+                    <div class="preview__sticker preview__sticker--new">Новинка</div>
+                    <div class="preview__sticker preview__sticker--exc">Эксклюзив</div>
+                  </div>
+                  <button class="btn ic-heart-grey preview__wish open_auth"></button>
+                  <a href="./product.html">
+                    <img src="./img/products/3.png" alt="" class="preview__thumb">
+                  </a>
+                  <div class="preview__art">Код: 12213354</div>
+                  <a href="./product.html" class="preview__name">Сир-крем Hochland вершковий 60% жиру, 200г</a>
+                  <div class="preview__info">
+                    <div class="preview__infoTitle">
+                      Мін. Замовлення:
+                      <span class="preview__infoValue">24 уп</span>
+                      <div class="tooltip tooltip--preview tooltip--short">
+                        <div class="tooltip__pick">?</div>
+                        <div class="tooltip__wrap">
+                          <div class="tooltip__content scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Sequi a
+                            commodi fuga quaerat qui suscipit nam quae soluta laborum quam!</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview__bottom">
+                    <div class="preview__price">
+                      <span>54,49 грн</span>
+                      <span class="preview__special">59,15 грн</span>
+                    </div>
+                    <button class="btn btn--primary ic-cart-white preview__buy" data-added="У кошику">В кошик</button>
+                  </div>
+                </div>
+                <div class="preview swiper-slide">
+                  <div class="preview__stickers">
+                    <div class="preview__sticker preview__sticker--new">Новинка</div>
+                    <div class="preview__sticker preview__sticker--spec">Акцiя</div>
+                  </div>
+                  <button class="btn ic-heart-grey preview__wish open_auth"></button>
+                  <a href="./product.html">
+                    <img src="./img/products/4.png" alt="" class="preview__thumb">
+                  </a>
+                  <div class="preview__art">Код: 12213354</div>
+                  <a href="./product.html" class="preview__name">Сьомга (лосось) філе охолоджене, 1кг</a>
+                  <div class="preview__info">
+                    <div class="preview__infoTitle">
+                      Мін. Замовлення:
+                      <span class="preview__infoValue">1 кг</span>
+                      <div class="tooltip tooltip--preview tooltip--short">
+                        <div class="tooltip__pick">?</div>
+                        <div class="tooltip__wrap">
+                          <div class="tooltip__content scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Sequi a
+                            commodi fuga quaerat qui suscipit nam quae soluta laborum quam!</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview__bottom">
+                    <div class="preview__price">
+                      <span>529,00 грн</span>
+                    </div>
+                    <button class="btn btn--primary ic-cart-white preview__buy" data-added="У кошику">В кошик</button>
+                  </div>
+                </div>
+                <div class="preview swiper-slide">
+                  <div class="preview__stickers">
+                    <div class="preview__sticker preview__sticker--new">Новинка</div>
+                    <div class="preview__sticker preview__sticker--exc">Эксклюзив</div>
+                  </div>
+                  <!-- if logged -->
+                  <!-- <button class="btn ic-heart-grey preview__wish"></button> -->
+                  <!-- else -->
+                  <button class="btn ic-heart-grey preview__wish open_auth"></button>
+                  <!-- endif -->
+                  <a href="./product.html">
+                    <img src="./img/products/1.png" alt="" class="preview__thumb">
+                  </a>
+                  <div class="preview__art">Код: 12213354</div>
+                  <a href="./product.html" class="preview__name">Борошно Хуторок пшеничне, фасоване, 1 кг</a>
+                  <div class="preview__info">
+                    <div class="preview__infoTitle">
+                      Мін. Замовлення:
+                      <span class="preview__infoValue">6 кг</span>
+                      <div class="tooltip tooltip--preview tooltip--short">
+                        <div class="tooltip__pick">?</div>
+                        <div class="tooltip__wrap">
+                          <div class="tooltip__content scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Sequi a
+                            commodi fuga quaerat qui suscipit nam quae soluta laborum quam!</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview__bottom">
+                    <div class="preview__price">
+                      <span>124,00 грн</span>
+                      <!-- if special -->
+                      <span class="preview__special">235,70 грн</span>
+                      <!-- endif -->
+                    </div>
+                    <button class="btn btn--primary ic-cart-white preview__buy" data-added="У кошику">В кошик</button>
+                  </div>
+                </div>
+                <div class="preview swiper-slide">
+                  <div class="preview__stickers">
+                    <div class="preview__sticker preview__sticker--new">Новинка</div>
+                    <div class="preview__sticker preview__sticker--exc">Эксклюзив</div>
+                  </div>
+                  <button class="btn ic-heart-grey preview__wish open_auth"></button>
+                  <a href="./product.html">
+                    <img src="./img/products/2.png" alt="" class="preview__thumb">
+                  </a>
+                  <div class="preview__art">Код: 12213354</div>
+                  <a href="./product.html" class="preview__name">Водорості Katana Норі 5 листів</a>
+                  <div class="preview__info">
+                    <div class="preview__infoTitle">
+                      Мін. Замовлення:
+                      <span class="preview__infoValue">10 уп</span>
+                      <div class="tooltip tooltip--preview tooltip--short">
+                        <div class="tooltip__pick">?</div>
+                        <div class="tooltip__wrap">
+                          <div class="tooltip__content scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Sequi a
+                            commodi fuga quaerat qui suscipit nam quae soluta laborum quam!</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview__bottom">
+                    <div class="preview__price">
+                      <span>48,49 грн</span>
+                    </div>
+                    <button class="btn btn--primary ic-cart-white preview__buy" data-added="У кошику">В кошик</button>
+                  </div>
+                </div>
+                <div class="preview swiper-slide">
+                  <div class="preview__stickers">
+                    <div class="preview__sticker preview__sticker--new">Новинка</div>
+                    <div class="preview__sticker preview__sticker--exc">Эксклюзив</div>
+                  </div>
+                  <button class="btn ic-heart-grey preview__wish open_auth"></button>
+                  <a href="./product.html">
+                    <img src="./img/products/3.png" alt="" class="preview__thumb">
+                  </a>
+                  <div class="preview__art">Код: 12213354</div>
+                  <a href="./product.html" class="preview__name">Сир-крем Hochland вершковий 60% жиру, 200г</a>
+                  <div class="preview__info">
+                    <div class="preview__infoTitle">
+                      Мін. Замовлення:
+                      <span class="preview__infoValue">24 уп</span>
+                      <div class="tooltip tooltip--preview tooltip--short">
+                        <div class="tooltip__pick">?</div>
+                        <div class="tooltip__wrap">
+                          <div class="tooltip__content scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Sequi a
+                            commodi fuga quaerat qui suscipit nam quae soluta laborum quam!</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview__bottom">
+                    <div class="preview__price">
+                      <span>54,49 грн</span>
+                      <span class="preview__special">59,15 грн</span>
+                    </div>
+                    <button class="btn btn--primary ic-cart-white preview__buy" data-added="У кошику">В кошик</button>
+                  </div>
+                </div>
+                <div class="preview swiper-slide">
+                  <div class="preview__stickers">
+                    <div class="preview__sticker preview__sticker--new">Новинка</div>
+                    <div class="preview__sticker preview__sticker--spec">Акцiя</div>
+                  </div>
+                  <button class="btn ic-heart-grey preview__wish open_auth"></button>
+                  <a href="./product.html">
+                    <img src="./img/products/4.png" alt="" class="preview__thumb">
+                  </a>
+                  <div class="preview__art">Код: 12213354</div>
+                  <a href="./product.html" class="preview__name">Сьомга (лосось) філе охолоджене, 1кг</a>
+                  <div class="preview__info">
+                    <div class="preview__infoTitle">
+                      Мін. Замовлення:
+                      <span class="preview__infoValue">1 кг</span>
+                      <div class="tooltip tooltip--preview tooltip--short">
+                        <div class="tooltip__pick">?</div>
+                        <div class="tooltip__wrap">
+                          <div class="tooltip__content scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Sequi a
+                            commodi fuga quaerat qui suscipit nam quae soluta laborum quam!</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview__bottom">
+                    <div class="preview__price">
+                      <span>529,00 грн</span>
+                    </div>
+                    <button class="btn btn--primary ic-cart-white preview__buy" data-added="У кошику">В кошик</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn ic-arrow-disable sliderArrows__arrow sliderArrows__next sliderArrows__next--related sliderArrows__arrow--active"></button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrap">
+        <div class="footer__main">
+          <a href="./">
+            <img class="footer__logo" src="img/logo.svg" alt="">
+          </a>
+          <div class="footer__socials header__socials">
+            <a href="#" class="ic-facebook" target="_blank"></a>
+            <a href="#" class="ic-instagram" target="_blank"></a>
+            <a href="#" class="ic-telegram" target="_blank"></a>
+          </div>
+          <div class="footer__copy">© 2018 sushi-product.com</div>
+        </div>
+        <div class="footer__list">
+          <div class="footer__title">Клiенту</div>
+          <ul>
+            <li><a href="./delivery.html">Оплата i Доставка</a></li>
+            <li><a href="./about.html">О Компанii</a></li>
+            <li><a href="./partners.html">Закупка</a></li>
+            <li><a href="./blog.html">Блог</a></li>
+            <li><a href="./carrier.html">Кар'eра</a></li>
+            <li><a href="./policy.html">Лiцензiйна угода</a></li>
+          </ul>
+        </div>
+        <div class="footer__list">
+          <div class="footer__title">Продукцiя</div>
+          <ul>
+            <li><a href="./catalog.html">Бакалея</a></li>
+            <li><a href="./catalog.html">Водорослi</a></li>
+            <li><a href="./catalog.html">Лапша</a></li>
+            <li><a href="./catalog.html">Напитки</a></li>
+            <li><a href="./catalog.html">Салати</a></li>
+            <li><a href="./catalog.html">Морепродукти</a></li>
+          </ul>
+        </div>
+        <div class="footer__list footer__list--contacts">
+          <div class="footer__title">Контакти</div>
+          <ul>
+            <li>
+              <a href="https://goo.gl/maps/H3Z6qpv7cq7V6CZC7" target="_blank" class="ic-marker">М. Харьков вул.Сумська
+                25</a>
+            </li>
+            <li>
+              <a href="tel:380681228583" class="ic-phone-white">+38 (068) 122-85-83</a>
+            </li>
+            <li>
+              <a href="mailto:info@sushi-product.com" class="ic-mail-white">info@sushi-product.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__rev">
+          <div class="footer__title">Допоможіть нам стати краще</div>
+          <div class="footer__subtitle">є питання по обслуговуванню або є запитання? Залишіть свій відгук!</div>
+          <button class="btn btn--primary footer__button open_review">Відгук</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- button to top -->
+  <button class="btn ic-arrow toTop"></button>
+
+
+  <!-- MODALS -->
+
+  <!-- auth -->
+  <div class="modal modalAuth">
+    <div class="modal__win">
+      <button class="btn modal__close ic-close-black"></button>
+      <div class="modal__header">
+        <div class="modal__title heading">Вхiд в особистий кабiнет</div>
+      </div>      
+      <form action="#" class="modal__form">
+        <div class="field">
+          <input type="email" class="input input" name="email" placeholder="E-mail*">
+        </div>
+        <div class="field">
+          <input type="password" class="input input" name="password" placeholder="Пароль*">
+        </div>
+        <div class="modalAuth__row">
+          <div class="modalAuth__remember">
+            <input class="checkbox" type="checkbox" name="remember" id="auth_remember">
+             <label for="auth_remember">Запам'ятати мене</label>
+          </div>
+          <button type="button" class="btn btn--dashed open_forgot">Забули пароль?</button>
+        </div>
+        <button class="btn btn--primary">Увiйти</button>
+        <button type="button" class="btn btn--dashed open_register modalAuth__register">Реєстрація</button>
+        <div class="modal__accept">
+          <input class="checkbox" type="checkbox" name="accept" id="auth_accept" required>
+          <label for="auth_accept">Я згоден з умовами <a href="#" target="_blank">угоди і правилами обробки персональних даних</a></label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- forgot password -->
+  <div class="modal modalForgot">
+    <div class="modal__win">
+      <button class="btn modal__close ic-close-black"></button>
+      <div class="modal__header">
+        <div class="modal__title modal__title--left heading">Забули пароль?</div>
+        <div class="modal__subtitle">Вкажіть ваш email для відправки посилання на скидання пароля</div>
+      </div>      
+      <form action="#" class="modal__form">
+        <div class="field">
+          <input type="email" class="input" name="email" placeholder="E-mail*" required>
+        </div>
+        <button class="btn btn--primary open_check">Надіслати</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- check mail -->
+  <div class="modal modalCheck">
+    <div class="modal__win">
+      <button class="btn modal__close ic-close-black"></button>
+      <div class="modal__header modal__header--single">
+        <div class="modal__title modal__title--left heading">Скидання паролю</div>
+        <div class="modal__subtitle">На ваш email було вiдправлене посилання на скидання паролю. Якщо посилання не прийшло
+        - перевiрте спам або спробуйте <button class="btn btn--dashed open_reset">вiдправити ще раз</button>.</div>
+      </div>      
+    </div>
+  </div>
+
+  <!-- reset password -->
+  <div class="modal modalReset">
+    <div class="modal__win">
+      <button class="btn modal__close ic-close-black"></button>
+      <div class="modal__header">
+        <div class="modal__title modal__title--left heading">Новий пароль</div>
+        <div class="modal__subtitle">Вкажіть новий пароль</div>
+      </div>
+      
+      <form action="#" class="modal__form">
+        <div class="field">
+          <input type="password" class="input" name="password" placeholder="Пароль*" required>
+        </div>
+        <div class="field">
+          <input type="password" class="input" name="password_repeat" placeholder="Повторiть пароль*" required>
+        </div>
+        <button class="btn btn--primary open_change_success">Змiнити пароль</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- succces change pass -->
+  <div class="modal modalSuccessPass">
+    <div class="modal__win">
+      <button class="btn modal__close ic-close-black"></button>
+      <div class="modal__header modal__header--single">
+        <div class="modal__title modal__title--left heading">Змiна паролю</div>
+        <div class="modal__subtitle">Пароль успiшно змiнено!</div>
+      </div>      
+    </div>
+  </div>
+
+  <!-- register -->
+  <div class="modal modalRegister">
+    <div class="modal__win scroll scroll--radius">
+      <button class="btn modal__close ic-close-black"></button>
+      <div class="modal__header">
+        <div class="modal__title heading">Реєстрація</div>
+      </div>      
+      <form action="#" class="modal__form">
+        <div class="field">
+          <input type="text" class="input" name="name_first" placeholder="Iм'я*">
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="name_last" placeholder="Прiзвище*">
+        </div>
+        <div class="field">
+          <input type="email" class="input" name="email" placeholder="E-mail*">
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="number" placeholder="+38(050)___ -__-__*">
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="organization" placeholder="Назва вашої організації*">
+        </div>
+        <div class="field">
+          <input type="password" class="input" name="password" placeholder="Пароль*">
+        </div>
+        <div class="field">
+          <input type="password" class="input" name="password_repeat" placeholder="Повторiть пароль*">
+        </div>
+        <button class="btn btn--primary">Реєстрація</button>
+        <div class="modal__accept">
+          <input class="checkbox" type="checkbox" name="accept" id="register_accept" required>
+          <label for="register_accept">Я згоден з умовами <a href="#" target="_blank">угоди і правилами обробки персональних даних</a></label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ask question -->
+  <div class="modal modalAsk">
+    <div class="modal__win scroll scroll--radius">
+      <button class="btn modal__close ic-close-black"></button>
+      <div class="modal__header">
+        <div class="modal__title modal__title--left heading">Залиште питання</div>
+        <div class="modal__subtitle">Залиште ваші контактні дані і питання. Наш менеджер зв'яжеться з вами в найкоротші
+          терміни!</div>
+      </div>      
+      <form action="#" class="modal__form">
+        <div class="fields fields--two">
+          <div class="field">
+            <input type="text" class="input" name="name_first" placeholder="Iм'я*">
+          </div>
+          <div class="field">
+            <input type="text" class="input" name="name_last" placeholder="Прiзвище*">
+          </div>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="number" placeholder="+38(050)___ -__-__*">
+        </div>
+        <div class="field">
+          <input type="email" class="input" name="email" placeholder="E-mail*">
+        </div>
+        <div class="field">
+          <textarea class="textarea" name="message" placeholder="Текст повідомлення*"></textarea>
+        </div>
+        <button class="btn btn--primary">Надіслати</button>
+        <div class="modal__accept">
+          <input class="checkbox" type="checkbox" name="accept" id="ask_accept" required>
+          <label for="ask_accept">Я згоден з умовами <a href="#" target="_blank">угоди і правилами обробки персональних даних</a></label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- add review for director -->
+  <div class="modal modalReview">
+    <div class="modal__win scroll scroll--radius">
+      <button class="btn modal__close ic-close-black"></button>
+      <div class="modal__header">
+        <div class="modal__title modal__title--left heading">Залиште вiдгук</div>
+        <div class="modal__subtitle">є питання по обслуговуванню або є запитання? Залишіть свій відгук! Ваше помiдомлення
+        потрапить вiдразу до дирекотра “Сушi Продукт” !</div>
+      </div>
+      <form action="#" class="modal__form">
+        <div class="fields fields--two">
+          <div class="field">
+            <input type="text" class="input" name="name_first" placeholder="Iм'я*">
+          </div>
+          <div class="field">
+            <input type="text" class="input" name="name_last" placeholder="Прiзвище*">
+          </div>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="number" placeholder="+38(050)___ -__-__*">
+        </div>
+        <div class="field">
+          <input type="email" class="input" name="email" placeholder="E-mail*">
+        </div>
+        <div class="field">
+          <textarea class="textarea" name="message" placeholder="Текст повідомлення*"></textarea>
+        </div>
+        <button class="btn btn--primary">Надіслати</button>
+        <div class="modal__accept">
+          <input class="checkbox" type="checkbox" name="accept" id="review_accept" required>
+          <label for="review_accept">Я згоден з умовами <a href="#" target="_blank">угоди і правилами обробки персональних даних</a></label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- add review for manager -->
+  <div class="modal modalReviewManager">
+    <div class="modal__win scroll scroll--radius">
+      <button class="btn modal__close ic-close-black"></button>
+      <div class="modal__header">
+        <div class="modal__title modal__title--left heading">Залиште вiдгук</div>
+        <div class="modal__subtitle">Оставте ваш отзыв или пожелание о работе компании и мы обязательно рассмотрим его</div>
+      </div>
+      <form action="#" class="modal__form">
+        <div class="fields fields--two">
+          <div class="field">
+            <input type="text" class="input" name="name_first" placeholder="Iм'я*">
+          </div>
+          <div class="field">
+            <input type="text" class="input" name="name_last" placeholder="Прiзвище*">
+          </div>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="number" placeholder="+38(050)___ -__-__*">
+        </div>
+        <div class="field">
+          <input type="email" class="input" name="email" placeholder="E-mail*">
+        </div>
+        <div class="field">
+          <textarea class="textarea" name="message" placeholder="Текст повідомлення*"></textarea>
+        </div>
+        <button class="btn btn--primary">Надіслати</button>
+        <div class="modal__accept">
+          <input class="checkbox" type="checkbox" name="accept" id="review_manager_accept" required>
+          <label for="review_manager_accept">Я згоден з умовами <a href="#" target="_blank">угоди і правилами обробки персональних даних</a></label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- callback -->
+  <div class="modal modalCallback">
+    <div class="modal__win">
+      <button class="btn modal__close ic-close-black"></button>
+      <div class="modal__header">
+        <div class="modal__title modal__title--left heading">Замовити дзвiнок</div>
+        <div class="modal__subtitle">Є питання по обслуговуванню або є запитання? Залишіть свій номер телефону, i ми
+        обов'язково вам зателефонуємо!</div>
+      </div>
+      <form action="#" class="modal__form">
+        <div class="field">
+          <input type="text" class="input" name="name_first" placeholder="Iм'я*">
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="number" placeholder="+38(050)___ -__-__*">
+        </div>
+        <div class="field">
+          <textarea class="textarea" name="message" placeholder="Коментар"></textarea>
+        </div>
+        <button class="btn btn--primary">Надiслати</button>
+        <div class="modal__accept">
+          <input class="checkbox" type="checkbox" name="accept" id="callback_accept" required>
+          <label for="callback_accept">Я згоден з умовами <a href="#" target="_blank">угоди і правилами обробки персональних даних</a></label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- change user profile info -->
+  <div class="modal modalUserInfo">
+    <div class="modal__win scroll scroll--radius">
+      <button class="btn modal__close ic-close-black"></button>
+      <div class="modal__header">
+        <div class="modal__title heading">Контактні дані</div>
+      </div>      
+      <form action="#" class="modal__form">
+        <div class="field">
+          <input type="text" class="input" name="user_change_name_first" placeholder="Iм'я" value="Iван">
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="user_change_name_last" placeholder="Прiзвище" value="Петров">
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="user_change_name_middle" placeholder="По-батькові" value="Не вказано">
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="user_change_number" placeholder="+38(050)___ -__-__" value="+38(050) 123-12-12">
+        </div>
+        <div class="field">
+          <input type="email" class="input" name="user_change_email" placeholder="E-mail" value="E-mail@email.com">
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="user_change_name_birth" placeholder="День народження" value="25.12.1986">
+        </div>    
+        <div class="field">
+          <input type="text" class="input" name="user_change_organization" placeholder="Організація" value="ООО ”Суши Продукт”">
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="user_change_organization_id" placeholder="ID організації" value="365488749">
+        </div>
+        <button class="btn btn--primary">Зберегти</button>
+        <div class="modal__accept">
+          <input class="checkbox" type="checkbox" name="accept" id="user_change_accept" required checked>
+          <label for="user_change_accept">Я згоден з умовами <a href="#" target="_blank">угоди і правилами обробки персональних даних</a></label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- change user profile addresses -->
+  <div class="modal modalUserAddress">
+    <div class="modal__win scroll scroll--radius">
+      <button class="btn modal__close ic-close-black"></button>
+      <div class="modal__header">
+        <div class="modal__title heading">Адреси доставки</div>
+      </div>      
+      <form action="#" class="modal__form">
+
+        <div class="modalUserAddress__address">
+          <div class="modalUserAddress__title">Адреса 1</div>
+          <button type="button" class="btn ic-trash modalUserAddress__del"></button>
+          <div class="field">
+            <input type="text" class="input" name="change_address_city_1" placeholder="Мiсто" value="Харкiв">
+          </div>
+          <div class="field">
+            <input type="text" class="input" name="change_address_street_1" placeholder="Вулиця" value="вулиця 23-го Августа">
+          </div>
+          <div class="field">
+            <input type="text" class="input" name="change_address_house_1" placeholder="Дiм" value="будинок 5">
+          </div>
+        </div>
+
+        <div class="modalUserAddress__address">
+          <div class="modalUserAddress__title">Адреса 2</div>
+          <button type="button" class="btn ic-trash modalUserAddress__del"></button>
+          <div class="field">
+            <input type="text" class="input" name="change_address_city_2" placeholder="Мiсто" value="Харкiв">
+          </div>
+          <div class="field">
+            <input type="text" class="input" name="change_address_street_2" placeholder="Вулиця" value="вулиця 23-го Августа">
+          </div>
+          <div class="field">
+            <input type="text" class="input" name="change_address_house_2" placeholder="Дiм" value="будинок 5">
+          </div>
+        </div>
+
+        <div class="modalUserAddress__address">
+          <div class="modalUserAddress__title">Адреса 3</div>
+          <button type="button" class="btn ic-trash modalUserAddress__del"></button>
+          <div class="field">
+            <input type="text" class="input" name="change_address_city_3" placeholder="Мiсто" value="Харкiв">
+          </div>
+          <div class="field">
+            <input type="text" class="input" name="change_address_street_3" placeholder="Вулиця" value="вулиця 23-го Августа">
+          </div>
+          <div class="field">
+            <input type="text" class="input" name="change_address_house_3" placeholder="Дiм" value="будинок 5">
+          </div>
+        </div>
+
+
+
+        <button class="btn btn--primary">Зберегти</button>
+        <div class="modal__accept">
+          <input class="checkbox" type="checkbox" name="accept" id="address_change_accept" required checked>
+          <label for="address_change_accept">Я згоден з умовами <a href="#" target="_blank">угоди і правилами обробки персональних даних</a></label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- add user profile address -->
+  <div class="modal modalAddAddress">
+    <div class="modal__win scroll scroll--radius">
+      <button class="btn modal__close ic-close-black"></button>
+      <div class="modal__header">
+        <div class="modal__title heading">Додати адресу</div>
+      </div>
+      <form action="#" class="modal__form">
+
+        <div class="modalUserAddress__address">
+          <div class="field">
+            <input type="text" class="input" name="add_address_city" placeholder="Мiсто">
+          </div>
+          <div class="field">
+            <input type="text" class="input" name="add_address_street" placeholder="Вулиця">
+          </div>
+          <div class="field">
+            <input type="text" class="input" name="add_address_house" placeholder="Дiм">
+          </div>
+        </div>
+
+        <button class="btn btn--primary">Зберегти</button>
+        <div class="modal__accept">
+          <input class="checkbox" type="checkbox" name="accept" id="address_add_accept" required checked>
+          <label for="address_add_accept">Я згоден з умовами <a href="#" target="_blank">угоди і правилами обробки персональних даних</a></label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- share -->
+  <div class="modal modalShare">
+    <div class="modal__win">
+      <button class="btn modal__close ic-close-black"></button>
+      <div class="modal__header">
+        <div class="modal__title modal__title--left heading">Подiлитися статтею</div>
+      </div>      
+      <div class="modalShare__items">
+        <a href="#" target="_blank" data-share="facebook" title="facebook" class="ic-facebook-big modalShare__item modalShare__item--facebook"></a>
+        <a href="#" target="_blank" data-share="twitter" title="twitter" class="ic-twitter modalShare__item modalShare__item--twitter"></a>
+        <a href="#" target="_blank" data-share="telegram" title="telegram" class="ic-telegram-big modalShare__item modalShare__item--telegram"></a>
+      </div>
+      <div class="modalShare__link">
+        <input type="text" value="" id="article_share_link" class="input input--line" readonly>
+        <button class="btn btn--dashed ic-copy modalShare__copy" data-copied="Скопировано!">Копировать</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- tender -->
+  <div class="modal modalTender">
+    <div class="modal__win scroll scroll--radius">
+      <button class="btn modal__close ic-close-black"></button>
+      <div class="modal__header">
+        <div class="modal__title modal__title--left heading">Залиште заявку</div>
+        <div class="modal__subtitle">Залиште ваші контактні дані і короткий опис вашої діяльності. Наш менеджер зв'яжеться з вами в найкоротші терміни!</div>
+      </div>
+      <form action="#" class="modal__form">
+        <div class="fields fields--two">
+          <div class="field">
+            <input type="text" class="input" name="name_first" placeholder="Iм'я*">
+          </div>
+          <div class="field">
+            <input type="text" class="input" name="name_last" placeholder="Прiзвище*">
+          </div>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="number" placeholder="+38(050)___ -__-__*">
+        </div>
+        <div class="field">
+          <input type="email" class="input" name="email" placeholder="E-mail*">
+        </div>
+        <div class="field">
+          <div class="select">
+            <input type="hidden" class="select__value" name="tender" id="partners_tender">
+            <div class="dropdown select__wrap">
+              <div class="dropdown__title arrow">Оберiть тендер</div>
+              <ul class="dropdown__list scroll">
+                <li>
+                  <button type="button" class="btn select__item" data-value="Виробництво м'ясних напiвфабрикатiв">Виробництво м'ясних напiвфабрикатiв</button>
+                </li>
+                <li>
+                  <button type="button" class="btn select__item" data-value="Виробництво напівтвердих сирiв">Виробництво напівтвердих сирiв</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <textarea class="textarea" name="message" placeholder="Текст повідомлення*"></textarea>
+        </div>
+        <div class="field">
+          <input type="file" name="file" class="input--file">
+          <span class="uploaded"></span>
+          <button class="btn btn--primary download">Завантажити файл</button>
+        </div>
+        <button class="btn btn--primary">Надіслати</button>
+        <div class="modal__accept">
+          <input class="checkbox" type="checkbox" name="accept" id="tender_accept" required>
+          <label for="tender_accept">Я згоден з умовами <a href="#" target="_blank">угоди і правилами обробки персональних даних</a></label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- MOBILE BURGER MENU -->
+  <div class="mobileMenu">
+    <button class="btn mobileMenu__close close_mobile ic-close"></button>
+    <div class="mobileMenu__inner">
+      <div class="mobileMenu__header">
+        <a href="./" class="mobileMenu__logo">
+          <img src="img/logo.svg" alt="Logo">
+        </a>
+        <div class="mobileMenu__langs">
+          <div class="header__languages">
+            <a href="#" class="header__lang header__lang--active">УКР</a>
+            <a href="#" class="header__lang">РУС</a>
+            <a href="#" class="header__lang">ENG</a>
+          </div>
+        </div>
+      </div>
+      <div class="mobileMenu__main scroll">
+        <ul class="scroll">
+          <li class="mobileMenu__item">
+
+            <!-- if logged -->
+            <a href="#" class="open_child"><i class="ic-user"></i> Особистий кабінет</a>
+            <!-- else -->
+            <!-- <a href="#" class="open_auth"><i class="ic-user"></i> Особистий кабінет</a> -->
+            <!-- endif -->
+
+            <ul class="mobileMenu__child">
+              <li class="ic-arrow-orange mobileMenu__root close_child"><a href="#"><i class="ic-user"></i> Особистий
+                  кабінет</a></li>
+              <li><a href="./account.html">Личная информация</a></li>
+              <li><a href="./wishlist.html">Список избранного</a></li>
+              <li><a href="./orders.html">История заказов</a></li>
+              <li><a href="./partners.html">Спiвробiтництво</a></li>
+              <li><a href="./bonus.html">Мій бонусний рахунок</a></li>
+              <li><a href="#">Выйти из аккаунта</a></li>
+            </ul>
+          </li>
+          <li class="mobileMenu__item">
+            <a href="#" class="open_child"><i class="ic-catalog-orange"></i> Каталог</a>
+            <ul class="mobileMenu__child mobileCatalog">
+              <li class="ic-arrow-orange mobileMenu__root close_child"><a href="#"><i class="ic-catalog-orange"></i>
+                  Каталог</a></li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Икра</a>
+                <button class="btn arrow mobileCatalog__opener"></button>
+                <ul class="mobileCatalog__child scroll">
+                  <li><a href="./catalog.html">Массаго</a></li>
+                  <li><a href="./catalog.html">Тобика</a></li>
+                  <li><a href="./catalog.html">Массаго</a></li>
+                  <li><a href="./catalog.html">Тобика</a></li>
+                  <li><a href="./catalog.html">Массаго</a></li>
+                  <li><a href="./catalog.html">Тобика</a></li>
+                  <li><a href="./catalog.html">Массаго</a></li>
+                  <li><a href="./catalog.html">Тобика</a></li>
+                  <li><a href="./catalog.html">Массаго</a></li>
+                  <li><a href="./catalog.html">Тобика</a></li>
+                </ul>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Сыры</a>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Бакалея</a>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Акция</a>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Рис</a>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Соусы</a>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Водоросли и грибы</a>
+                <button class="btn arrow mobileCatalog__opener"></button>
+                <ul class="mobileCatalog__child scroll">
+                  <li><a href="./catalog.html">Нори</a></li>
+                  <li><a href="./catalog.html">Водоросли и разное</a></li>
+                  <li><a href="./catalog.html">Грибы</a></li>
+                </ul>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Новинки</a>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Мука и панировка</a>
+                <button class="btn arrow mobileCatalog__opener"></button>
+                <ul class="mobileCatalog__child scroll">
+                  <li><a href="./catalog.html">Мука и панировка 1</a></li>
+                  <li><a href="./catalog.html">Мука и панировка 2</a></li>
+                  <li><a href="./catalog.html">Мука и панировка 3</a></li>
+                </ul>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Лапша</a>
+                <button class="btn arrow mobileCatalog__opener"></button>
+                <ul class="mobileCatalog__child scroll">
+                  <li><a href="./catalog.html">Лапша 1</a></li>
+                  <li><a href="./catalog.html">Лапша 2</a></li>
+                  <li><a href="./catalog.html">Лапша 3</a></li>
+                </ul>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Собственное производство</a>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Сливки</a>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Эксклюзив</a>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Рыба</a>
+                <button class="btn arrow mobileCatalog__opener"></button>
+                <ul class="mobileCatalog__child scroll">
+                  <li><a href="./catalog.html">Рыба 1</a></li>
+                  <li><a href="./catalog.html">Рыба 2</a></li>
+                  <li><a href="./catalog.html">Рыба 3</a></li>
+                </ul>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Актуальное</a>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Фасованная продукция</a>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Подборки</a>
+                <button class="btn arrow mobileCatalog__opener"></button>
+                <ul class="mobileCatalog__child scroll">
+                  <li><a href="./catalog.html">Подборки 1</a></li>
+                  <li><a href="./catalog.html">Подборки 2</a></li>
+                  <li><a href="./catalog.html">Подборки 3</a></li>
+                </ul>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Уксус</a>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Фасованная продукция</a>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Морепродукты</a>
+              </li>
+              <li class="mobileCatalog__item">
+                <a href="./catalog.html">Сопутствующие товары</a>
+              </li>
+            </ul>
+          </li>
+          <li class="mobileMenu__item">
+
+            <!-- if logged -->
+            <!-- <a href="./wishlist.html"><i class="ic-heart"></i> Обранне</a> -->
+            <!-- else -->
+            <a href="#" class="open_auth"><i class="ic-heart"></i> Обранне</a>
+            <!-- endif -->
+
+          </li>
+          <li class="mobileMenu__item">
+            <a href="./about.html">Про компанiю</a>
+          </li>
+          <li class="mobileMenu__item">
+            <a href="./partners.html">Спiвробiтництво</a>
+          </li>
+          <li class="mobileMenu__item">
+            <a href="./blog.html">Блог</a>
+          </li>
+          <li class="mobileMenu__item">
+            <a href="./carrier.html">Кар'єра</a>
+          </li>
+          <li class="mobileMenu__item">
+            <a href="./contacts.html">Контакти</a>
+          </li>
+        </ul>
+      </div>
+      <div class="mobileMenu__footer">
+        <div class="header__contacts">
+          <a href="tel:380681228583" class="ic-phone">+38 (068) 122-85-83</a>
+          <a href="mailto:info@sushi-product.com" class="ic-mail">info@sushi-product.com</a>
+        </div>
+        <div class="header__socials">
+          <a href="#" class="ic-facebook" target="_blank"></a>
+          <a href="#" class="ic-instagram" target="_blank"></a>
+          <a href="#" class="ic-telegram" target="_blank"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- jquery required for only pages: MAIN, PRODUCT -->
+  <script src="./libs/jquery/jquery.min.js"></script>
+  <!-- end jquery -->
+
+  <!-- parallax required for MAIN page only -->
+  <script src="./libs/parallax/TweenLite.js"></script>
+  <script src="./libs/parallax/CSSPlugin.js"></script>
+  <script src="./libs/parallax/parallax_background.js"></script>
+  <!-- end parallax -->
+
+  <!-- fancybox required for PRODUCT page only -->
+  <script src="./libs/lightbox/jquery.fancybox.min.js"></script>
+  <!-- end fancybox -->
+
+  <script src="./libs/swiper/swiper-bundle.min.js"></script>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
