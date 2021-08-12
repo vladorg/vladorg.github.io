@@ -3107,6 +3107,22 @@ div.swiper-slide .preview {
   display: none;
 }
 
+.accountSidebar {
+  display: none;
+}
+
+.accountMain {
+  display: none;
+}
+
+.footer {
+  display: none;
+}
+
+.aboutBanner__logo {
+  display: none;
+}
+
 /* montserrat-300 - latin_cyrillic */
 
 @font-face {
@@ -4619,6 +4635,7 @@ div.swiper-slide .preview {
   background: #242424;
   margin-top: auto;
   padding: 40px 0 0 0;
+  display: block;
 }
 
 .footer__inner {
@@ -8569,6 +8586,7 @@ body.page-checkout {
   padding: 24px 0 87px calc((100% - 1222px) / 2);
   width: 33%;
   background: #f4f4f4;
+  display: block;
 }
 
 .accountNav {
@@ -8607,6 +8625,7 @@ body.page-checkout {
 .accountMain {
   padding: 0 calc((100% - 1222px) / 2) 88px 24px;
   width: 67%;
+  display: block;
 }
 
 .accountMain .breadcrumbs {
@@ -9502,6 +9521,7 @@ body.page-checkout {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   max-width: 50%;
+  display: block;
 }
 
 .aboutContent {

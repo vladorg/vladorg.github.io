@@ -3107,6 +3107,22 @@ div.swiper-slide .preview {
   display: none;
 }
 
+.accountSidebar {
+  display: none;
+}
+
+.accountMain {
+  display: none;
+}
+
+.footer {
+  display: none;
+}
+
+.aboutBanner__logo {
+  display: none;
+}
+
 @media (max-width: 1500px) {
   .header__toolbar .exchange .tooltip__wrap {
     top: 100%;

@@ -294,7 +294,7 @@ window.addEventListener('load', () => {
     const products_default_row = get_el('.productsListDefault', false);
     const throttle_delay = 300;
     const quantity_input = get_el('.quantity__value', false);
-    const pass_shower = get_el('.pass_shower', false);
+    const pass_shower  = get_el('.pass_shower', false);
     const form_control = get_el('.form.form--control', false);
     const sidebar_opener = get_el('.open_sidebar', false);
     const current_url = window.location;
@@ -1565,7 +1565,7 @@ window.addEventListener('load', () => {
       
       let result = validate(required_fields);
       if (result) {
-        document.location.pathname = './success.html';
+        document.location.pathname = 'success.html';
       }
     }
 
