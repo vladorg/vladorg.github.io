@@ -1,18 +1,14 @@
 window.addEventListener('load', () => {
 
-
   /*
   *** Intro
   */
 
   // get DOM elements short helper
   const get_el = (selector, single = true) => {
-    if (selector != '' || selector != undefined) {
+    if (selector) {
       return single ? document.querySelector(selector) : document.querySelectorAll(selector);
-    } else {
-      return null
-    }
-    
+    }    
   }
   
 
@@ -42,14 +38,13 @@ window.addEventListener('load', () => {
     if (modal) {
       const target = get_el(modal);
       const modals = get_el('.modal', false);
+
       modals.forEach(modal => {
         modal.classList.remove('modal--opened');
       });
       target.classList.add('modal--opened');
       document.documentElement.classList.add('blocked');
-    } else {
-      return
-    }      
+    }    
   }
 
   /*
@@ -136,7 +131,7 @@ window.addEventListener('load', () => {
       } else {
         this.submit();
       }
-      
+            
     } else {
       console.log('form is not valid...');
     }
@@ -180,18 +175,24 @@ window.addEventListener('load', () => {
   /*
   *** Global variables
   */
-
   const menu_button = get_el('.menu__btn', false);
   const menu = get_el('.menuContent');
   const drops = get_el('.dropdown', false);
-  const color_picker = get_el('.color-picker', false);
   const isMobile = window.innerWidth <= 768 ? true : false;
   const getCoords = elem => elem.getBoundingClientRect().top + pageYOffset;
   const accordion_opened = get_el('.accordion--opened', false);
   const header_height = get_el('.header').scrollHeight;
 
-  let reg_password = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}/g;
-  let reg_email = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  let reg_password = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}/g; // validation pattern for password
+  let reg_email = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/; // validation pattern for email
+  let swiper_pagination = {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+    renderBullet: function (index, className) {
+      return `<div class="${className} bullet"></div>`;
+    },
+  }
 
   let products_custom_slider_params = {
     slidesPerView: 3,
@@ -209,14 +210,7 @@ window.addEventListener('load', () => {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return `<div class="${className} bullet"></div>`;
-      },
-    },
+    pagination: swiper_pagination,
     breakpoints: {
       320: {
         slidesPerView: 1
@@ -229,9 +223,7 @@ window.addEventListener('load', () => {
       }
     }
   };
-  let products_default_slider_params = {...products_custom_slider_params};
-  products_default_slider_params.slidesPerView = 4;
-  products_default_slider_params.breakpoints = {
+  let products_default_slider_params = {...products_custom_slider_params, slidesPerView: 4, breakpoints: {
     320: {
       slidesPerView: 1
     },
@@ -244,7 +236,7 @@ window.addEventListener('load', () => {
     1440: {
       slidesPerView: 4
     }
-  };
+  }};
 
 
 
@@ -268,24 +260,17 @@ window.addEventListener('load', () => {
   ];
 
   /* *** call all modules *** */
-  modules.forEach(fn => {
-    try_fn(fn);
-  })
-
-
-
-
+  modules.forEach(fn => try_fn(fn));
 
 
 
   /*
-  ***** Modules begin *****
+  ***** MODULES BEGIN *****
   */
 
   /*
   *** Base
   */
-
   function base() {
     const drop_btn = get_el('.dropdown__btn', false);
     const accordion_btn = get_el('.accordion__btn', false);
@@ -316,9 +301,7 @@ window.addEventListener('load', () => {
     
     
     drop_btn.forEach(el => {
-      el.addEventListener('click', e => {
-        el.closest('.dropdown').classList.toggle('dropdown--opened');
-      });
+      el.addEventListener('click', e => el.closest('.dropdown').classList.toggle('dropdown--opened'));
     });
 
     /* init opened accordions */
@@ -371,12 +354,7 @@ window.addEventListener('load', () => {
             target.type = 'text';
             btn.classList.add('active');
           }          
-        } else {
-          return
-        }
-
-
-        
+        }        
       });
     });
 
@@ -393,8 +371,7 @@ window.addEventListener('load', () => {
           menu.classList.remove('menuContent--opened');
         }
       }
-      catch(e) {}
-      
+      catch(e) {}     
 
       // drops
       if (!t_c.contains('dropdown__inner') && !t_c.contains('dropdown__btn')) {
@@ -447,9 +424,7 @@ window.addEventListener('load', () => {
       }
 
       // anchors
-      if (t_c.contains('anchor')) {
-        anchor.call(t);
-      }
+      t_c.contains('anchor') ? anchor.call(t) : null;
 
       // quantity
       if (t_c.contains('quantity__minus')) {
@@ -561,9 +536,6 @@ window.addEventListener('load', () => {
         openModal('#modalProductReview');
       }
 
-      
-
-
     });
     
     document.addEventListener('scroll', e => {
@@ -592,20 +564,21 @@ window.addEventListener('load', () => {
 
     document.addEventListener('keydown', e => {
       if (e.code === 'Escape') {
-        get_el('.modal.modal--opened').classList.remove('modal--opened');
+        let modal = get_el('.modal.modal--opened');
+
+        if (!modal) {
+          return
+        }
+
+        modal.classList.remove('modal--opened');
         setTimeout(() => {
           document.documentElement.classList.remove('blocked');
         }, 400);
       }
     });
 
-    products_custom_row.forEach(products => {
-      let products_custom_slider = new Swiper(products, products_custom_slider_params);
-    });
-
-    products_default_row.forEach(products => {
-      let products_default_slider = new Swiper(products, products_default_slider_params);
-    });
+    products_custom_row.forEach(el => new Swiper(el, products_custom_slider_params));
+    products_default_row.forEach(el => new Swiper(el, products_default_slider_params));
 
     form_control.forEach(form => {
       form.addEventListener('submit', e => {
@@ -621,6 +594,7 @@ window.addEventListener('load', () => {
       let code = this.dataset.color;
       let others;
       let images;
+
       if (this.closest('.preview__colors')) {
         others = this.closest('.preview__colors').querySelectorAll('.color-picker');
         images = this.closest('.preview__caption').querySelectorAll('.preview__images img');
@@ -804,50 +778,29 @@ window.addEventListener('load', () => {
     }
     catch(e){};
 
-
-
-
-
-
   }
-
-
-
-
 
 
 
   /*
   *** Header
   */
-
   function header() {
 
-    menu_button.forEach(el => {
-      el.addEventListener('click', e => {
-        menu.classList.toggle('menuContent--opened');
-      })
-    })
+    menu_button.forEach(el => el.addEventListener('click', e => menu.classList.toggle('menuContent--opened')));
 
   }
-
-
-
-
 
 
 
   /*
   *** Main page
   */
-
   function index() {
 
     const banner = get_el('.banner__slider');
     const popular_buttons = get_el('.populars__buttons');
-    const popular_products = get_el('.populars__tab', false);
     const equipment_buttons = get_el('.equipments__buttons');
-    const equipment_products = get_el('.equipments__tab', false);
     const brands_items = get_el('.brands__wrap .container');
     const blog_articles = get_el('.blog .blog__inner');
     let tabs_buttons_slider_params = {
@@ -886,14 +839,7 @@ window.addEventListener('load', () => {
         delay: 20001111,
         disableOnInteraction: false
       },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return `<div class="${className} bullet"></div>`;
-        },
-      },
+      pagination: swiper_pagination
     });
 
     /* *** end *** */
@@ -932,14 +878,7 @@ window.addEventListener('load', () => {
       observeParents: true,
       slideVisibleClass: 'swiper-slide-visible',
       spaceBetween: 24,
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return `<div class="${className} bullet"></div>`;
-        },
-      },
+      pagination: swiper_pagination
     });
     isMobile ? brands_items_slider.init() : null;
 
@@ -962,14 +901,7 @@ window.addEventListener('load', () => {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return `<div class="${className} bullet"></div>`;
-        },
-      },
+      pagination: swiper_pagination,
       breakpoints: {
         320: {
           slidesPerView: 1
@@ -1014,15 +946,10 @@ window.addEventListener('load', () => {
   }
 
 
-
-
-
-
   
   /*
   *** Catalog page
   */
-
   function catalog() {
     const ui_slider = get_el('#ui_slider');
     const childs_wrap = get_el('.catalogChilds .swiper-container');
@@ -1076,14 +1003,7 @@ window.addEventListener('load', () => {
       observer: true,
       observeParents: true,
       slideVisibleClass: 'swiper-slide-visible',
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return `<div class="${className} bullet"></div>`;
-        },
-      },
+      pagination: swiper_pagination,
       breakpoints: {
         320: {
           slidesPerView: 1
@@ -1093,20 +1013,15 @@ window.addEventListener('load', () => {
         }
       }
     });    
+
     isMobile ? childs_slider.init() : null;
     
   }
 
 
-
-
-
-
-
   /*
   *** Product pages
   */
-
   function product_big() {
 
     const adv_photos = get_el('.productPresentSlider');
@@ -1136,14 +1051,7 @@ window.addEventListener('load', () => {
         delay: 4022200,
         disableOnInteraction: false
       },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return `<div class="${className} bullet"></div>`;
-        },
-      },
+      pagination: swiper_pagination,
       on: {
         init: function () { caption_debounce.call(this) },
         slideChangeTransitionStart: function () { caption_debounce.call(this) },
@@ -1194,7 +1102,8 @@ window.addEventListener('load', () => {
     }
     // end advantages slider
 
-    let payment_delivery_slider = new Swiper(payment_delivery, {
+
+    let params = {
       slidesPerView: 1,
       loop: false,
       autoHeight: false,
@@ -1207,63 +1116,12 @@ window.addEventListener('load', () => {
         delay: 20001111,
         disableOnInteraction: false
       },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return `<div class="${className} bullet"></div>`;
-        },
-      }
-    });
+      pagination: swiper_pagination
+    };
 
-    let present_images_slider = new Swiper(present_images, {
-      slidesPerView: 1,
-      loop: true,
-      autoHeight: false,
-      init: false,
-      speed: 200,
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
-      },
-      autoplay: {
-        delay: 20001111,
-        disableOnInteraction: false
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return `<div class="${className} bullet"></div>`;
-        },
-      }
-    });
-
-    let complect_images_slider = new Swiper(complect_images, {
-      slidesPerView: 1,
-      loop: true,
-      autoHeight: false,
-      init: false,
-      speed: 200,
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
-      },
-      autoplay: {
-        delay: 20001111,
-        disableOnInteraction: false
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return `<div class="${className} bullet"></div>`;
-        },
-      }
-    });
+    let payment_delivery_slider = new Swiper(payment_delivery, params);    
+    let present_images_slider = new Swiper(present_images, {...params, loop: true, init: false});
+    let complect_images_slider = new Swiper(complect_images, {...params, loop: true, init: false});
 
     isMobile ? present_images_slider.init() : null;
     isMobile ? complect_images_slider.init() : null;
@@ -1298,7 +1156,7 @@ window.addEventListener('load', () => {
   function product() {
 
     /* product images gallery */
-    const product_nav = new Swiper('.productMainImages__nav', {
+    let product_nav = new Swiper('.productMainImages__nav', {
       spaceBetween: 8,
       slidesPerView: 5,
       spaceBetween: 55,
@@ -1319,7 +1177,7 @@ window.addEventListener('load', () => {
 
       }
     });
-    const product_thumb = new Swiper('.productMainImages__thumb', {
+    let product_thumb = new Swiper('.productMainImages__thumb', {
       thumbs: {
         swiper: product_nav
       },
@@ -1340,14 +1198,7 @@ window.addEventListener('load', () => {
       },
       observer: true,
       observeParents: true,
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return `<div class="${className} bullet"></div>`;
-        },
-      }
+      pagination: swiper_pagination
     });
 
     /* product review anchor */
@@ -1361,8 +1212,7 @@ window.addEventListener('load', () => {
           window.scrollTo({ top: getCoords(tab), behavior: 'smooth' });
         }      
       });
-    });
-    
+    });    
 
     let tabs_buttons_slider = new Swiper('.productTabs__buttons', {
       slidesPerView: 3,
@@ -1382,18 +1232,14 @@ window.addEventListener('load', () => {
       }
     });
     isMobile ? tabs_buttons_slider.init() : null;
+
   }
-
-
-
-
 
 
 
   /*
   *** Cart page
   */
-
   function cart() {
     const wish_all = get_el('#add_to_wish_all');
     const delete_all = get_el('#cart_del_all');
@@ -1402,30 +1248,21 @@ window.addEventListener('load', () => {
     wish_all.addEventListener('click', e => {
       wish_all.disabled = true;
       wish_all.classList.add('active');
-      get_el('.preview', false).forEach(product => {
-        product.querySelector('.preview__wishlist').click();
-      });
+      get_el('.preview', false).forEach(product => product.querySelector('.preview__wishlist').click());
       console.log('cart add all to wish button click...');
     });
     // delete all products
     delete_all.addEventListener('click', e => {
-      get_el('.preview', false).forEach(product => {
-        product.querySelector('.preview__delete').click();
-      });
+      get_el('.preview', false).forEach(product => product.querySelector('.preview__delete').click());
     });
+
   }
-
-
-
-
-
 
 
 
   /*
   *** Checkout
   */
-
   function checkout() {
     const checkout_pick = get_el('.checkoutStep__pick', false);
     const checkout_pick_child = get_el('.checkoutStepItem__child input[type=radio]', false);
@@ -1537,9 +1374,7 @@ window.addEventListener('load', () => {
       checked_radios.forEach(radio => {
         let fields = radio.closest('.checkoutStepItem__radio').querySelectorAll('.required');
         if (fields.length) {
-          fields.forEach(field => {
-            required_fields.push(field);
-          });
+          fields.forEach(field => required_fields.push(field));
         }
       });
 
@@ -1557,14 +1392,18 @@ window.addEventListener('load', () => {
       checked_radios.forEach(radio => {
         let fields = radio.closest('.checkoutStepItem__radio').querySelectorAll('.required');
         if (fields.length) {
-          fields.forEach(field => {
-            required_fields.push(field);
-          });
+          fields.forEach(field => required_fields.push(field));
         }
       });  
       
       let result = validate(required_fields);
+      
       if (result) {
+        /* 
+          success validation all steps
+          ajax send data or submit #checkoutForm...
+        */
+
         document.location.pathname = 'success.html';
       }
     }
@@ -1597,9 +1436,7 @@ window.addEventListener('load', () => {
     function update(s) {
       let step_id = s.dataset.step;
 
-      steps.forEach(s => {
-        s.classList.remove('active');
-      });
+      steps.forEach(s => s.classList.remove('active'));
       s.classList.add('active');
       if (step_id) {
         nav_items.forEach(item => {          
@@ -1627,19 +1464,14 @@ window.addEventListener('load', () => {
         summary_row.appendChild(s);        
       });
     }
+
   }
-
-
-
-
-
 
 
 
   /*
   *** Compare
   */
-
   function compare() {
     const change_category = get_el('.change_category', false);
     const change_sort = get_el('.compareContent__sort .radio', false);
@@ -1691,12 +1523,8 @@ window.addEventListener('load', () => {
 
 
     // synchronization sliders
-    compare_slider.forEach((slider, i) => {
-      slider.controller.control = compare_chars_slider[i];
-    });
-    compare_chars_slider.forEach((slider, i) => {
-      slider.controller.control = compare_slider[i];
-    });
+    compare_slider.forEach((slider, i) => slider.controller.control = compare_chars_slider[i]);
+    compare_chars_slider.forEach((slider, i) => slider.controller.control = compare_slider[i]);
 
 
     change_category.forEach(btn => {
@@ -1707,15 +1535,9 @@ window.addEventListener('load', () => {
           let chars = get_el('.compareChars__tab', false);
           let buttons = get_el('.change_category', false);
 
-          buttons.forEach(el => {
-            el.dataset.id == id ? el.classList.add('active') : el.classList.remove('active');
-          })
-          tabs.forEach(tab => {
-            tab.dataset.id == id ? tab.classList.add('active') : tab.classList.remove('active');
-          })
-          chars.forEach(char => {
-            char.dataset.id == id ? char.classList.add('active') : char.classList.remove('active');
-          })
+          buttons.forEach(el => el.dataset.id == id ? el.classList.add('active') : el.classList.remove('active'));
+          tabs.forEach(tab => tab.dataset.id == id ? tab.classList.add('active') : tab.classList.remove('active'));
+          chars.forEach(char => char.dataset.id == id ? char.classList.add('active') : char.classList.remove('active'));
         } else {
           console.log('repeated click && not set data-id attr');
           return
@@ -1723,9 +1545,7 @@ window.addEventListener('load', () => {
       })
     });
 
-    change_sort.forEach(sort => {
-      sort.addEventListener('change', compare_sort.bind(sort));
-    });
+    change_sort.forEach(sort => sort.addEventListener('change', compare_sort.bind(sort)));
 
     function compare_sort() {
       let cols = get_el('.compareChars__col', false);
@@ -1782,24 +1602,16 @@ window.addEventListener('load', () => {
 
 
 
-
-
-
   /*
   *** Account base
   */
-
   function account() {}
-
-
-
 
 
 
   /*
   *** Account info
   */
-
   function account_info() {
 
     // user contacts
@@ -1817,10 +1629,7 @@ window.addEventListener('load', () => {
 
       if (!user_info.classList.contains('editing')) {
         user_info.classList.add('editing');
-        inputs.forEach(input => {
-          input.readOnly = false;
-        });
-        
+        inputs.forEach(input => input.readOnly = false);        
         this.disabled = true;
         this.classList.add('active');
       }     
@@ -1842,18 +1651,14 @@ window.addEventListener('load', () => {
     });
 
     cancel_info.addEventListener('click', e => {
-      inputs.forEach(el => {
-        el.value = current_info[el.name];
-      });
+      inputs.forEach(el => el.value = current_info[el.name]);
       disable_info();
     });
 
 
     function disable_info() {
       user_info.classList.remove('editing');
-      inputs.forEach(input => {
-        input.readOnly = true;
-      });
+      inputs.forEach(input => input.readOnly = true);
       edit_info.disabled = false;
       edit_info.classList.remove('active');
     }
@@ -1871,14 +1676,10 @@ window.addEventListener('load', () => {
     const address_adding_row = get_el('.accountAddressesChange__row--new');
     let current_addresses = {};
 
-    edit_form.onsubmit = e => {
-      e.preventDefault();
-    }
+    edit_form.onsubmit = e => e.preventDefault();
 
     edit_address.addEventListener('click', function(e) { 
-      inputs_address.forEach(el => {
-        current_addresses[el.name] = el.value;
-      });
+      inputs_address.forEach(el => current_addresses[el.name] = el.value);
 
       if (!user_addresses.classList.contains('editing')) {
         user_addresses.classList.add('editing');
@@ -1921,9 +1722,7 @@ window.addEventListener('load', () => {
     });
 
     cancel_address.addEventListener('click', e => {
-      inputs_address.forEach(el => {
-        el.value = current_addresses[el.name];
-      });
+      inputs_address.forEach(el => el.value = current_addresses[el.name]);
       disable_addresses();
       adding_fields(false);
     });
@@ -1982,9 +1781,7 @@ window.addEventListener('load', () => {
       user_addresses.classList.remove('editing');
       edit_address.disabled = false;
       edit_address.classList.remove('active');
-      inputs_address.forEach(el => {
-        el.classList.remove('input--err');       
-      });
+      inputs_address.forEach(el => el.classList.remove('input--err'));
     }
 
     function adding_fields(action, trigger = false) {
@@ -2005,50 +1802,27 @@ window.addEventListener('load', () => {
       }
     }
 
-
-
-
-
-
-
-
   }
-
-
-
-
-
-
-
 
 
 
   /*
   *** Account orders
   */
-
   function account_orders() {
 
     document.addEventListener('click', e => {
       if (e.target.classList.contains('open_order') || e.target.parentNode.classList.contains('open_order')) {
-        let parent = e.target.closest('.accountOrder');
-        let details = parent.querySelector('.accountOrdersTable__details');
-        
-        parent.classList.toggle('active');
+        e.target.closest('.accountOrder').classList.toggle('active');
       }
     });
   }
 
 
 
-
-
-
   /*
   *** Article page
   */
-
-
   function article_page() {
     const rate_buttons = get_el('.article_rate', false);
 
@@ -2069,9 +1843,7 @@ window.addEventListener('load', () => {
 
       btn.addEventListener('mouseleave', e => {
         e.preventDefault();
-        rate_buttons.forEach(el => {
-          el.classList.remove('hover');
-        });
+        rate_buttons.forEach(el => el.classList.remove('hover'));
       });
 
       btn.addEventListener('click', e => {
@@ -2093,28 +1865,19 @@ window.addEventListener('load', () => {
           }
         }
 
-        rate_buttons.forEach(el => {
-          el.disabled = true;
-        });
+        rate_buttons.forEach(el => el.disabled = true);
 
         console.log(rate_index);
       });
-
       
     });
-
-
   }
-
-
-
 
 
 
   /*
   *** Info pages
   */
-
   function info() {
     const gallery = get_el('.gallery .swiper-container');
     const credit_news = get_el('.creditPage .news .swiper-container');
@@ -2129,14 +1892,7 @@ window.addEventListener('load', () => {
       observer: true,
       observeParents: true,
       slideVisibleClass: 'swiper-slide-visible',
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return `<div class="${className} bullet"></div>`;
-        }
-      }
+      pagination: swiper_pagination
     };
 
     let gallery_slider = new Swiper(gallery, {...params,
@@ -2160,19 +1916,9 @@ window.addEventListener('load', () => {
 
 
 
-
-
-
-
-
-
-
-
-
   /*
   *** Footer
   */
-
   function footer() {
     let menu_opener = get_el('.footer__opener', false);
 
@@ -2186,21 +1932,5 @@ window.addEventListener('load', () => {
       });
     });
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 });

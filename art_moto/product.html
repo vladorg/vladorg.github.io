@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title><link rel="stylesheet" href="css/critical.css">  </head>
+    <title>Product</title><link rel="stylesheet" href="css/critical.min.css">  </head>
   <body class="root page-product">
     <header class="header">
       <div class="header__toolbar">
@@ -358,16 +358,16 @@
                 <div class="productMainInfoOptions__title label">Цвет:</div>
                 <div class="productMainInfoOptions__content">
                   <div class="productMainInfoOptions__field">
-                    <input class="input-hidden" type="radio" name="color" id="color1" value="Черно-красный" checked>
-                    <label for="color1"> <img class="color-picker active" src="./img/colors/black_red.svg" alt=""></label>
+                    <input class="input-hidden color-picker active" type="radio" name="color" id="color1" value="Черно-красный" checked>
+                    <label for="color1"> <img src="./img/colors/black_red.svg" alt=""></label>
                   </div>
-                  <div class="productMainInfoOptions__field">
-                    <input class="input-hidden" type="radio" name="color" id="color2" value="Черно-синий">
-                    <label for="color2"> <img class="color-picker" src="./img/colors/black_blue.svg" alt=""></label>
+                  <div class="productMainInfoOptions__field"> 
+                    <input class="input-hidden color-picker" type="radio" name="color" id="color2" value="Черно-синий">
+                    <label for="color2"> <img src="./img/colors/black_blue.svg" alt=""></label>
                   </div>
-                  <div class="productMainInfoOptions__field">
-                    <input class="input-hidden" type="radio" name="color" id="color3" value="Черный">
-                    <label for="color3"> <img class="color-picker" src="./img/colors/black.svg" alt=""></label>
+                  <div class="productMainInfoOptions__field"> 
+                    <input class="input-hidden color-picker" type="radio" name="color" id="color3" value="Черный">
+                    <label for="color3"> <img src="./img/colors/black.svg" alt=""></label>
                   </div>
                 </div>
               </div>
@@ -525,7 +525,10 @@
                 <div class="productReviews__list">                 
                   <div class="productReviews__sort sorting">
                     <div class="sorting__title">Сортировать:</div>
-                    <div class="sorting__items"><a class="sorting__item sorting__item--active btn btn--dashed" href="#"> <span>По рейтингу</span></a><a class="sorting__item btn btn--dashed" href="#"><span>По дате</span></a></div>
+                    <div class="sorting__items dropdown dropdown--default dropdown--mobile">
+                      <div class="dropdown__btn ic-arrow_down">По рейтингу</div>
+                      <div class="dropdown__inner"><a class="sorting__item btn btn--dashed" href="#"><span>По умолчанию</span></a><a class="sorting__item sorting__item--active btn btn--dashed" href="#"> <span>По рейтингу</span></a><a class="sorting__item btn btn--dashed" href="#"><span>По дате</span></a></div>
+                    </div>
                   </div>
                   <div class="productReviews__items">
                     <div class="productReviews__item">

@@ -1587,11 +1587,11 @@ div.swiper-slide .preview {
 }
 
 .dropdown--opened .dropdown__inner {
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  -webkit-transform: none !important;
+  -ms-transform: none !important;
+  transform: none !important;
 }
 
 .socialswidget {
@@ -3613,11 +3613,12 @@ div.swiper-slide .preview {
   }
 
   .preview.preview--compare .preview__thumb {
-    padding: 24px;
+    padding: 16px 24px;
+    margin-bottom: 8px;
   }
 
   .preview.preview--compare .preview__thumb img {
-    max-width: 75px;
+    max-width: 40px;
   }
 
   .preview.preview--compare .preview__model {
