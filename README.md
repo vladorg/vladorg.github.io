@@ -1,12 +1,9 @@
-<h1>Hi there!</h1>
-<p>Welcome to my repos!</p>
-<img src="https://github.com/vladorg/tobi_mobi/raw/master/dist/img/chudik2.png" alt="Tobi image">
+# Hi there!
 
----
+Welcome to my repos!
+My name's `Vladislav` & i'm Front-end dev.
+In here, i'm will be publish my projects.
 
-<p>My name's <code>Vladislav</code> & i'm Front-end software engineer.</p>
-<p>In here, i'm will be publish my projects.</p>
+![tobimobi](https://raw.githubusercontent.com/vladorg/tobi_mobi/master/app/img/chudik2.png)
 
----
-
-<h3>Have fun! :)</h3>
+## Have fun! :)

@@ -131,7 +131,7 @@ window.addEventListener('load', () => {
       } else {
         this.submit();
       }
-            
+
     } else {
       console.log('form is not valid...');
     }
@@ -183,6 +183,9 @@ window.addEventListener('load', () => {
   const accordion_opened = get_el('.accordion--opened', false);
   const header_height = get_el('.header').scrollHeight;
 
+  const MAIN_SLIDER_DELAY = 4000;
+  const PRODUCTS_SLIDER_DELAY = 4000;
+
   let reg_password = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}/g; // validation pattern for password
   let reg_email = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/; // validation pattern for email
   let swiper_pagination = {
@@ -198,11 +201,12 @@ window.addEventListener('load', () => {
     slidesPerView: 3,
     speed: 200,
     effect: 'slide',
+    loop: true,
     watchSlidesVisibility: true,
     observer: true,
     observeParents: true,
     autoplay: {
-      delay: 401100,
+      delay: PRODUCTS_SLIDER_DELAY,
       disableOnInteraction: false
     },
     slideVisibleClass: 'swiper-slide-visible',
@@ -282,6 +286,7 @@ window.addEventListener('load', () => {
     const pass_shower  = get_el('.pass_shower', false);
     const form_control = get_el('.form.form--control', false);
     const sidebar_opener = get_el('.open_sidebar', false);
+    const top_btn = get_el('#top');
     const current_url = window.location;
     const modal_hashs = [
       '#modalAuth',
@@ -546,9 +551,18 @@ window.addEventListener('load', () => {
 
         /* hide/show menu on scroll */
         try {
-          if (window.pageYOffset > menu.clientHeight) {
-            menu.classList.remove('menuContent--opened');
+          if (!isMobile) {
+            if (window.pageYOffset > menu.clientHeight) {
+              menu.classList.remove('menuContent--opened');
+            }
           }
+
+          if (window.pageYOffset > 200) {
+            top_btn.classList.add('active');
+          } else {
+            top_btn.classList.remove('active');
+          }
+          
         }
         catch(e){}
 
@@ -778,6 +792,20 @@ window.addEventListener('load', () => {
     }
     catch(e){};
 
+
+    try {
+      GLightbox();
+    }
+    catch(e){};
+
+    try {
+      top_btn.addEventListener('click', e => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        top_btn.classList.remove('active');
+      });
+    }
+    catch(e){};
+
   }
 
 
@@ -787,7 +815,23 @@ window.addEventListener('load', () => {
   */
   function header() {
 
-    menu_button.forEach(el => el.addEventListener('click', e => menu.classList.toggle('menuContent--opened')));
+    menu_button.forEach(el => {
+      el.addEventListener('click', e => {
+        if (menu.classList.contains('menuContent--opened')) {
+          menu.classList.remove('menuContent--opened');
+          if (isMobile) {
+            isMobile ? document.documentElement.classList.remove('blocked') : null;
+            el.classList.remove('active');
+          }          
+        } else {
+          menu.classList.add('menuContent--opened');
+          if (isMobile) {
+            isMobile ? document.documentElement.classList.add('blocked') : null;
+            el.classList.add('active');
+          }
+        }
+      })
+    });
 
   }
 
@@ -799,33 +843,11 @@ window.addEventListener('load', () => {
   function index() {
 
     const banner = get_el('.banner__slider');
-    const popular_buttons = get_el('.populars__buttons');
-    const equipment_buttons = get_el('.equipments__buttons');
     const brands_items = get_el('.brands__wrap .container');
     const blog_articles = get_el('.blog .blog__inner');
-    let tabs_buttons_slider_params = {
-      slidesPerView: 4,
-      init: false,
-      speed: 200,
-      effect: 'slide',
-      watchSlidesVisibility: true,
-      observer: true,
-      observeParents: true,
-      slideVisibleClass: 'swiper-slide-visible',
-      breakpoints: {
-        320: {
-          slidesPerView: 3
-        },
-        768: {
-          slidesPerView: 4
-        }
-      }
-    };
-
     
     /* *** main screen slider *** */
-
-    let main_slider = new Swiper(banner, {
+    new Swiper(banner, {
       slidesPerView: 1,
       slidesPerColumn: 1,
       loop: false,
@@ -836,61 +858,37 @@ window.addEventListener('load', () => {
         crossFade: true
       },
       autoplay: {
-        delay: 20001111,
+        delay: MAIN_SLIDER_DELAY,
         disableOnInteraction: false
       },
       pagination: swiper_pagination
     });
-
     /* *** end *** */
 
 
-
-    /* *** popular products slider *** */
-
-    let popular_buttons_slider = new Swiper(popular_buttons, tabs_buttons_slider_params);
-    isMobile ? popular_buttons_slider.init() : null;
-
+    /* *** brands slider *** */      
+    if (isMobile) {
+      new Swiper(brands_items, {
+        slidesPerView: 2,
+        slidesPerColumn: 2,
+        slidesPerColumnFill: 'row',
+        speed: 200,
+        effect: 'slide',
+        watchSlidesVisibility: true,
+        observer: true,
+        observeParents: true,
+        slideVisibleClass: 'swiper-slide-visible',
+        spaceBetween: 24,
+        pagination: swiper_pagination
+      });
+    }
     /* *** end *** */
-
-
-
-    /* *** equipment products slider *** */
-
-    let equipment_buttons_slider = new Swiper(equipment_buttons, tabs_buttons_slider_params);
-    isMobile ? equipment_buttons_slider.init() : null;
-
-    /* *** end *** */
-
-
-
-    /* *** brands slider *** */    
-
-    let brands_items_slider = new Swiper(brands_items, {
-      slidesPerView: 2,
-      slidesPerColumn: 2,
-      slidesPerColumnFill: 'row',
-      init: false,
-      speed: 200,
-      effect: 'slide',
-      watchSlidesVisibility: true,
-      observer: true,
-      observeParents: true,
-      slideVisibleClass: 'swiper-slide-visible',
-      spaceBetween: 24,
-      pagination: swiper_pagination
-    });
-    isMobile ? brands_items_slider.init() : null;
-
-    /* *** end *** */
-
 
 
     /* *** blog articles slider *** */  
 
-    let blog_articles_slider = new Swiper(blog_articles, {
+    new Swiper(blog_articles, {
       slidesPerView: 3,
-      loop: false,
       speed: 200,
       effect: 'slide',
       watchSlidesVisibility: true,
@@ -1032,6 +1030,8 @@ window.addEventListener('load', () => {
     const nav_opener = get_el('.productBigNav__btn');
     const present_images = get_el('.productPresentInfo__images');
     const complect_images = get_el('.productComplectation__photos');
+    const main_nav = get_el('.productBigMainContent__nav');
+    const main_photos = get_el('.productBigMainContent__content');
 
     // slider for product advanced advantages
     let adv_timer;
@@ -1151,6 +1151,31 @@ window.addEventListener('load', () => {
       this.closest('.productBigNav').classList.toggle('productBigNav--opened');
     }); 
 
+
+    let main_nav_slider = new Swiper(main_nav, {
+      direction: "vertical",
+      slidesPerView: 5,
+      spaceBetween: 8,
+      autoHeight: true,
+      watchSlidesVisibility: true,
+      slideVisibleClass: 'swiper-slide-visible',
+      observer: true,
+      observeParents: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    let main_photos_slider = new Swiper(main_photos, {
+      ...params,
+      allowTouchMove: false,
+      thumbs: {
+        swiper: main_nav_slider
+      },
+      pagination: swiper_pagination
+    });
+
   }
 
   function product() {
@@ -1214,24 +1239,24 @@ window.addEventListener('load', () => {
       });
     });    
 
-    let tabs_buttons_slider = new Swiper('.productTabs__buttons', {
-      slidesPerView: 3,
-      init: false,
-      speed: 200,
-      watchSlidesVisibility: true,
-      observer: true,
-      observeParents: true,
-      slideVisibleClass: 'swiper-slide-visible',
-      breakpoints: {
-        320: {
-          slidesPerView: 2
-        },
-        500: {
-          slidesPerView: 3
-        }
-      }
-    });
-    isMobile ? tabs_buttons_slider.init() : null;
+    // let tabs_buttons_slider = new Swiper('.productTabs__buttons', {
+    //   slidesPerView: 3,
+    //   init: false,
+    //   speed: 200,
+    //   watchSlidesVisibility: true,
+    //   observer: true,
+    //   observeParents: true,
+    //   slideVisibleClass: 'swiper-slide-visible',
+    //   breakpoints: {
+    //     320: {
+    //       slidesPerView: 2
+    //     },
+    //     500: {
+    //       slidesPerView: 3
+    //     }
+    //   }
+    // });
+    // isMobile ? tabs_buttons_slider.init() : null;
 
   }
 
@@ -1404,7 +1429,7 @@ window.addEventListener('load', () => {
           ajax send data or submit #checkoutForm...
         */
 
-        document.location.pathname = 'success.html';
+        document.location.href = './success.html';
       }
     }
 

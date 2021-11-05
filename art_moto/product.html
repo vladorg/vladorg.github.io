@@ -52,7 +52,7 @@
             <button class="btn menu__btn ic-burger"> </button>
             <div class="menuContent">
               <div class="menuContent__header">
-                <button class="btn menuContent__close ic-close"></button><a href=""><img class="menuContent__logo" src="./img/logo.svg" alt="Logo" width="180" height="58"></a>
+                <button class="btn menuContent__close ic-close"></button><a href="./"><img class="menuContent__logo" src="./img/logo.svg" alt="Logo" width="180" height="58"></a>
               </div>
               <ul class="menuContent__list scroll">
                 <li><a href="./about.html">О компании</a></li>
@@ -64,16 +64,64 @@
                 <li><a href="./#.html">Салоны</a></li>
                 <li><a href="./contacts.html">Контакты</a></li>
               </ul>
+              <div class="menuContent__mobile visible-xs">         
+                <div class="footer__col footer__catalog">
+                  <div class="footer__title footer__opener ic-arrow_down">Каталог</div>
+                  <ul class="footer__list">
+                    <li class="footer__target"><a href="./catalog.html">SALE</a></li>
+                    <li><a href="./catalog.html">Б/У техника</a></li>
+                    <li><a href="./catalog.html">Мотоциклы</a></li>
+                    <li><a href="./catalog.html">Квадроциклы</a></li>
+                    <li><a href="./catalog.html">Скутеры</a></li>
+                    <li><a href="./catalog.html">Электротраспорт</a></li>
+                    <li><a href="./catalog.html">Снегоходы</a></li>
+                    <li><a href="./catalog.html">Водная техника</a></li>
+                    <li><a href="./catalog.html">Прицепы</a></li>
+                    <li><a href="./catalog.html">Экипировка</a></li>
+                    <li><a href="./catalog.html">Запчасти</a></li>
+                    <li><a href="./catalog.html">Аксессуары</a></li>
+                  </ul>
+                </div>
+                <div class="footer__col footer__catalog">
+                  <div class="footer__title footer__opener ic-arrow_down">Информация</div>
+                  <ul class="footer__list">
+                    <li><a href="./about.html">О компании</a></li>
+                    <li><a href="./blog.html">Новости</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="./service.html">Мотосервис</a></li>
+                    <li><a href="#">Условия пользования</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                  </ul>
+                </div>
+                <div class="footer__col footer__catalog">
+                  <div class="footer__title footer__opener ic-arrow_down">Покупателю</div>
+                  <ul class="footer__list">
+                    <li><a href="#">Связаться с нами</a></li>
+                    <li><a href="#">Возврат товара</a></li>
+                    <li><a href="#">Личный кабинет</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Бренды</a></li>
+                    <li><a href="#">Акции</a></li>
+                  </ul>
+                </div>
+                <div class="footer__col footer__catalog">
+                  <div class="footer__title footer__opener ic-arrow_down">Контакты</div>
+                  <ul class="footer__list">
+                    <li><a href="#">Магазины</a></li>
+                    <li><a href="#">Мотосервисы</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div><a class="logo" href="./"><img src="./img/logo.svg" alt="Logo" width="180" height="58"></a>
           <div class="search">
             <input class="search__inner">
             <button class="btn ic-search search__btn"></button>
           </div>
-          <div class="user ic-user"></div>
-          <div class="wishlist ic-heart"></div>
-          <div class="compare ic-compare"></div>
-          <div class="cart ic-cart">(0)</div>
+          <div class="dropdown user">
+            <button class="btn dropdown__btn ic-user"></button>
+            <div class="dropdown__inner"><a href="./account-info.html">Иванов Иван</a><a class="active" href="#">Выйти</a></div>
+          </div><a class="wishlist ic-heart" href="./account-wishlist.html"> </a><a class="compare ic-compare" href="./compare.html"></a><a class="cart ic-cart" href="./cart.html">(0)</a>
           <div class="currency dropdown">
             <div class="currency__title dropdown__title"><span>USD</span>($)</div>
             <button class="btn dropdown__btn ic-arrow_down"></button>
@@ -318,7 +366,7 @@
           </div>
           <div class="productMainImages">
             <div class="swiper-container swiper-visible-slides productMainImages__thumb ic-zoom-in">
-              <div class="swiper-wrapper"><a class="swiper-slide" href="./img/product/product1.png" data-fancybox="gallery"><img src="./img/product/product1.png" alt=""></a><a class="swiper-slide" href="./img/product/product2.png" data-fancybox="gallery"><img src="./img/product/product2.png" alt=""></a><a class="swiper-slide" href="./img/product/product3.png" data-fancybox="gallery"><img src="./img/product/product3.png" alt=""></a><a class="swiper-slide" href="./img/product/product4.png" data-fancybox="gallery"><img src="./img/product/product4.png" alt=""></a><a class="swiper-slide" href="./img/product/product5.png" data-fancybox="gallery"><img src="./img/product/product5.png" alt=""></a><a class="swiper-slide" href="./img/product/product1.png" data-fancybox="gallery"><img src="./img/product/product1.png" alt=""></a>
+              <div class="swiper-wrapper"><a class="swiper-slide glightbox" href="./img/product/product1.png"><img src="./img/product/product1.png" alt=""></a><a class="swiper-slide glightbox" href="./img/product/product2.png"><img src="./img/product/product2.png" alt=""></a><a class="swiper-slide glightbox" href="./img/product/product3.png"><img src="./img/product/product3.png" alt=""></a><a class="swiper-slide glightbox" href="./img/product/product4.png"><img src="./img/product/product4.png" alt=""></a><a class="swiper-slide glightbox" href="./img/product/product5.png"><img src="./img/product/product5.png" alt=""></a><a class="swiper-slide glightbox" href="./img/product/product1.png"><img src="./img/product/product1.png" alt=""></a>
                 <div class="swiper-slide">
                   <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rPM9B99wHsI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                 </div>
@@ -413,7 +461,11 @@
               <div class="productMainInfoActions__tools">
                 <button class="btn ic-heart_orange preview__wishlist"></button>
                 <button class="btn ic-compare_orange preview__compare"></button>
-                <button class="btn ic-share_orange share-button"></button>
+                <button class="btn ic-share_orange sharing"> 
+                  <div class="sharing__wrap">
+                    <div class="sharing__content"><a class="sharing__item" href="#" target="_blank"><img src="./img/icons/pin.svg" alt=""></a><a class="sharing__item" href="#" target="_blank"><img src="./img/icons/google.svg" alt=""></a><a class="sharing__item" href="#" target="_blank"><img src="./img/icons/fcb.svg" alt=""></a></div>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -431,12 +483,12 @@
         </section>
       </div>
       <section class="productTabs tabs">
-        <div class="productTabs__buttons container swiper-container swiper-visible">
-          <div class="productTabs__nav swiper-wrapper">
-            <button class="btn tabs__btn swiper-slide tabs__btn--active productTabs__btn" data-tab="product_tab1">Характеристики</button>
-            <button class="btn tabs__btn swiper-slide productTabs__btn" data-tab="product_tab2">Доставка и оплата</button>
-            <button class="btn tabs__btn swiper-slide productTabs__btn" data-tab="product_tab3">Гарантия и сервис</button>
-            <button class="btn tabs__btn swiper-slide productTabs__btn productTabs__btn--reviews" data-tab="product_tab4">Отзывы(2)</button>
+        <div class="productTabs__buttons container">
+          <div class="productTabs__nav">
+            <button class="btn tabs__btn tabs__btn--active productTabs__btn" data-tab="product_tab1">Характеристики</button>
+            <button class="btn tabs__btn productTabs__btn" data-tab="product_tab2">Доставка и оплата</button>
+            <button class="btn tabs__btn productTabs__btn" data-tab="product_tab3">Гарантия и сервис</button>
+            <button class="btn tabs__btn productTabs__btn productTabs__btn--reviews" data-tab="product_tab4">Отзывы(2)</button>
           </div>
         </div>
         <div class="productTabs__wrap"> 
@@ -683,8 +735,7 @@
       <div class="container">
         <div class="footer__inner">
           <div class="footer__col footer__catalog">
-            <div class="footer__title">Каталог</div>
-            <button class="btn ic-arrow_down visible-xs footer__opener"></button>
+            <div class="footer__title footer__opener ic-arrow_down">Каталог</div>
             <ul class="footer__list">
               <li class="footer__target"><a href="./catalog.html">SALE</a></li>
               <li><a href="./catalog.html">Б/У техника</a></li>
@@ -701,8 +752,7 @@
             </ul>
           </div>
           <div class="footer__col footer__info">
-            <div class="footer__title">Информация</div>
-            <button class="btn ic-arrow_down visible-xs footer__opener"></button>
+            <div class="footer__title footer__opener ic-arrow_down">Информация</div>
             <ul class="footer__list">
               <li><a href="./about.html">О компании</a></li>
               <li><a href="./blog.html">Новости</a></li>
@@ -722,8 +772,7 @@
             </div>
           </div>
           <div class="footer__col footer__buyer">
-            <div class="footer__title">Покупателю</div>
-            <button class="btn ic-arrow_down visible-xs footer__opener"></button>
+            <div class="footer__title footer__opener ic-arrow_down">Покупателю</div>
             <ul class="footer__list">
               <li><a href="#">Связаться с нами</a></li>
               <li><a href="#">Возврат товара</a></li>
@@ -734,8 +783,7 @@
             </ul>
           </div>
           <div class="footer__col footer__contacts">
-            <div class="footer__title">Контакты</div>
-            <button class="btn ic-arrow_down visible-xs footer__opener"></button>
+            <div class="footer__title footer__opener ic-arrow_down">Контакты</div>
             <ul class="footer__list">
               <li><a href="#">Магазины</a></li>
               <li><a href="#">Мотосервисы</a></li>
@@ -765,6 +813,7 @@
         </div>
       </div>
     </footer>
+    <button class="btn ic-top" id="top"></button>
     <div class="modal" id="modalCredits"> 
       <div class="modal__win scroll">
         <button class="btn modal__close ic-close_modal"></button>
@@ -1032,10 +1081,10 @@
     <script src="./libs/nouislider/nouislider.min.js"></script>
     <script src="./libs/view_360/js-cloudimage-360-view.min.js"></script>
     <script src="./libs/lazysizes/lazysizes.min.js"></script>
-    <script src="./libs/jquery/jquery.min.js"></script>
-    <script src="./libs/lightbox/jquery.fancybox.min.js"></script>
-    <script src="./libs/mask/imask.min.js"></script><script src="js/main.js"></script>    <link rel="stylesheet" data-style="swiper" href="./css/libs/swiper-bundle.min.css">
+    <script src="./libs/lightbox/glightbox.min.js"></script>
+    <script src="./libs/mask/imask.min.js"></script>
+    <script src="./libs/lazyload/lazyload.min.js"></script><script src="js/main.js"></script>    <link rel="stylesheet" data-style="swiper" href="./css/libs/swiper-bundle.min.css">
     <link rel="stylesheet" data-style="aos" href="./css/libs/aos.css">
     <link rel="stylesheet" data-style="nouislider" href="./css/libs/nouislider.css">
-    <link rel="stylesheet" data-style="fancybox" href="./css/libs/jquery.fancybox.min.css"><link rel="stylesheet" href="css/style.css">  </body>
+    <link rel="stylesheet" data-style="fancybox" href="./css/libs/glightbox.min.css"><link rel="stylesheet" href="css/style.css">  </body>
 </html>

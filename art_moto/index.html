@@ -52,7 +52,7 @@
             <button class="btn menu__btn ic-burger"> </button>
             <div class="menuContent">
               <div class="menuContent__header">
-                <button class="btn menuContent__close ic-close"></button><a href=""><img class="menuContent__logo" src="./img/logo.svg" alt="Logo" width="180" height="58"></a>
+                <button class="btn menuContent__close ic-close"></button><a href="./"><img class="menuContent__logo" src="./img/logo.svg" alt="Logo" width="180" height="58"></a>
               </div>
               <ul class="menuContent__list scroll">
                 <li><a href="./about.html">О компании</a></li>
@@ -64,16 +64,64 @@
                 <li><a href="./#.html">Салоны</a></li>
                 <li><a href="./contacts.html">Контакты</a></li>
               </ul>
+              <div class="menuContent__mobile visible-xs">         
+                <div class="footer__col footer__catalog">
+                  <div class="footer__title footer__opener ic-arrow_down">Каталог</div>
+                  <ul class="footer__list">
+                    <li class="footer__target"><a href="./catalog.html">SALE</a></li>
+                    <li><a href="./catalog.html">Б/У техника</a></li>
+                    <li><a href="./catalog.html">Мотоциклы</a></li>
+                    <li><a href="./catalog.html">Квадроциклы</a></li>
+                    <li><a href="./catalog.html">Скутеры</a></li>
+                    <li><a href="./catalog.html">Электротраспорт</a></li>
+                    <li><a href="./catalog.html">Снегоходы</a></li>
+                    <li><a href="./catalog.html">Водная техника</a></li>
+                    <li><a href="./catalog.html">Прицепы</a></li>
+                    <li><a href="./catalog.html">Экипировка</a></li>
+                    <li><a href="./catalog.html">Запчасти</a></li>
+                    <li><a href="./catalog.html">Аксессуары</a></li>
+                  </ul>
+                </div>
+                <div class="footer__col footer__catalog">
+                  <div class="footer__title footer__opener ic-arrow_down">Информация</div>
+                  <ul class="footer__list">
+                    <li><a href="./about.html">О компании</a></li>
+                    <li><a href="./blog.html">Новости</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="./service.html">Мотосервис</a></li>
+                    <li><a href="#">Условия пользования</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                  </ul>
+                </div>
+                <div class="footer__col footer__catalog">
+                  <div class="footer__title footer__opener ic-arrow_down">Покупателю</div>
+                  <ul class="footer__list">
+                    <li><a href="#">Связаться с нами</a></li>
+                    <li><a href="#">Возврат товара</a></li>
+                    <li><a href="#">Личный кабинет</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Бренды</a></li>
+                    <li><a href="#">Акции</a></li>
+                  </ul>
+                </div>
+                <div class="footer__col footer__catalog">
+                  <div class="footer__title footer__opener ic-arrow_down">Контакты</div>
+                  <ul class="footer__list">
+                    <li><a href="#">Магазины</a></li>
+                    <li><a href="#">Мотосервисы</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div><a class="logo" href="./"><img src="./img/logo.svg" alt="Logo" width="180" height="58"></a>
           <div class="search">
             <input class="search__inner">
             <button class="btn ic-search search__btn"></button>
           </div>
-          <div class="user ic-user"></div>
-          <div class="wishlist ic-heart"></div>
-          <div class="compare ic-compare"></div>
-          <div class="cart ic-cart">(0)</div>
+          <div class="dropdown user">
+            <button class="btn dropdown__btn ic-user"></button>
+            <div class="dropdown__inner"><a href="./account-info.html">Иванов Иван</a><a class="active" href="#">Выйти</a></div>
+          </div><a class="wishlist ic-heart" href="./account-wishlist.html"> </a><a class="compare ic-compare" href="./compare.html"></a><a class="cart ic-cart" href="./cart.html">(0)</a>
           <div class="currency dropdown">
             <div class="currency__title dropdown__title"><span>USD</span>($)</div>
             <button class="btn dropdown__btn ic-arrow_down"></button>
@@ -332,14 +380,10 @@
         <div class="container">
           <div class="heading">ПОПУЛЯРНЫЕ МОДЕЛИ</div>
           <div class="tabs">
-            <div class="populars__buttons tabs__buttons swiper-container">
-              <div class="swiper-wrapper">
-                <button class="btn swiper-slide tabs__btn tabs__btn--active" data-tab="populars_tab1">Мотоциклы</button>
-                <button class="btn swiper-slide tabs__btn" data-tab="populars_tab2">Квадроциклы</button>
-                <button class="btn swiper-slide tabs__btn" data-tab="populars_tab3">Скутеры</button>
-                <button class="btn swiper-slide tabs__btn" data-tab="populars_tab4">Электротранспорт</button>
-                <button class="btn swiper-slide tabs__btn" data-tab="populars_tab5">Смотреть все</button>
-              </div>
+            <div class="populars__buttons tabs__buttons">
+              <button class="btn tabs__btn tabs__btn--active" data-tab="populars_tab1">Мотоциклы</button>
+              <button class="btn tabs__btn" data-tab="populars_tab2">Квадроциклы</button>
+              <button class="btn tabs__btn" data-tab="populars_tab3">Смотреть все</button>
             </div>
             <div class="populars__tabs tabs">
               <div class="populars__tab productsListCustom swiper-container swiper-blured swiper-visible tabs__content tabs__content--active" data-tab="populars_tab1">
@@ -651,212 +695,6 @@
                 <div class="swiper-button-next"></div>
                 <div class="swiper-pagination"></div>
               </div>
-              <div class="populars__tab productsListCustom swiper-container swiper-blured swiper-visible tabs__content" data-tab="populars_tab4"> 
-                <div class="swiper-button-prev"></div>
-                <div class="populars__products swiper-wrapper">
-                  <div class="swiper-slide">
-                      <div class="preview preview--custom">
-                        <div class="preview__caption">
-                          <button class="btn preview__buy ic-cart_black"></button>
-                          <div class="preview__colors"><img class="color-picker active" src="./img/colors/black.svg" alt="" data-color="Черный"><img class="color-picker" src="./img/colors/black_blue.svg" alt="" data-color="Черно-синий"><img class="color-picker" src="./img/colors/black_red.svg" alt="" data-color="Черно-красный">
-                          </div><a class="preview__images" href="./product-big.html"><img class="active" width="312" height="202" src="./img/products/1.png" alt="" data-color="Черный"><img width="312" height="202" src="./img/products/2.png" alt="" data-color="Черно-синий"><img width="312" height="202" src="./img/products/3.png" alt="" data-color="Черно-красный"></a><a class="preview__name title" href="./product-big.html">PANIGALE V2</a>
-                          <div class="preview__model">DUCATI</div>
-                          <div class="preview__price"><span>250 000 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools">
-                          <button class="btn btn--dashed ic-compare_black preview__compare"><span>В сравнение</span></button>
-                          <button class="btn btn--dashed ic-heart_black preview__wishlist"><span>В избранное</span></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview preview--custom">
-                        <div class="preview__caption">
-                          <button class="btn preview__buy ic-cart_black"></button>
-                          <div class="preview__colors"><img class="color-picker active" src="./img/colors/black_blue.svg" alt="" data-color="Черно-синий"><img class="color-picker" src="./img/colors/black_red.svg" alt="" data-color="Черно-красный"><img class="color-picker" src="./img/colors/black.svg" alt="" data-color="Черный">
-                          </div><a class="preview__images" href="./product-big.html"><img class="active" width="312" height="202" src="./img/products/2.png" alt="" data-color="Черно-синий"><img width="312" height="202" src="./img/products/3.png" alt="" data-color="Черно-красный"><img width="312" height="202" src="./img/products/1.png" alt="" data-color="Черный"></a><a class="preview__name title" href="./product-big.html">LF 200-14F K19</a>
-                          <div class="preview__model">LIFAN</div>
-                          <div class="preview__price"><span>120 950 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools">
-                          <button class="btn btn--dashed ic-compare_black preview__compare"><span>В сравнение</span></button>
-                          <button class="btn btn--dashed ic-heart_black preview__wishlist"><span>В избранное</span></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview preview--custom">
-                        <div class="preview__caption">
-                          <button class="btn preview__buy ic-cart_black"></button>
-                          <div class="preview__colors"><img class="color-picker active" src="./img/colors/black_red.svg" alt="" data-color="Черно-красный"><img class="color-picker" src="./img/colors/black.svg" alt="" data-color="Черный"><img class="color-picker" src="./img/colors/black_blue.svg" alt="" data-color="Черно-синий">
-                          </div><a class="preview__images" href="./product-big.html"><img class="active" width="312" height="202" src="./img/products/3.png" alt="" data-color="Черно-красный"><img width="312" height="202" src="./img/products/1.png" alt="" data-color="Черный"><img width="312" height="202" src="./img/products/2.png" alt="" data-color="Черно-синий"></a><a class="preview__name title" href="./product-big.html">XY 250GY-6B CROSS</a>
-                          <div class="preview__model">SHINERAY</div>
-                          <div class="preview__price"><span>44 212 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools">
-                          <button class="btn btn--dashed ic-compare_black preview__compare"><span>В сравнение</span></button>
-                          <button class="btn btn--dashed ic-heart_black preview__wishlist"><span>В избранное</span></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview preview--custom">
-                        <div class="preview__caption">
-                          <button class="btn preview__buy ic-cart_black"></button>
-                          <div class="preview__colors"><img class="color-picker active" src="./img/colors/black.svg" alt="" data-color="Черный"><img class="color-picker" src="./img/colors/black_blue.svg" alt="" data-color="Черно-синий"><img class="color-picker" src="./img/colors/black_red.svg" alt="" data-color="Черно-красный">
-                          </div><a class="preview__images" href="./product-big.html"><img class="active" width="312" height="202" src="./img/products/1.png" alt="" data-color="Черный"><img width="312" height="202" src="./img/products/2.png" alt="" data-color="Черно-синий"><img width="312" height="202" src="./img/products/3.png" alt="" data-color="Черно-красный"></a><a class="preview__name title" href="./product-big.html">PANIGALE V2</a>
-                          <div class="preview__model">DUCATI</div>
-                          <div class="preview__price"><span>250 000 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools">
-                          <button class="btn btn--dashed ic-compare_black preview__compare"><span>В сравнение</span></button>
-                          <button class="btn btn--dashed ic-heart_black preview__wishlist"><span>В избранное</span></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview preview--custom">
-                        <div class="preview__caption">
-                          <button class="btn preview__buy ic-cart_black"></button>
-                          <div class="preview__colors"><img class="color-picker active" src="./img/colors/black_blue.svg" alt="" data-color="Черно-синий"><img class="color-picker" src="./img/colors/black_red.svg" alt="" data-color="Черно-красный"><img class="color-picker" src="./img/colors/black.svg" alt="" data-color="Черный">
-                          </div><a class="preview__images" href="./product-big.html"><img class="active" width="312" height="202" src="./img/products/2.png" alt="" data-color="Черно-синий"><img width="312" height="202" src="./img/products/3.png" alt="" data-color="Черно-красный"><img width="312" height="202" src="./img/products/1.png" alt="" data-color="Черный"></a><a class="preview__name title" href="./product-big.html">LF 200-14F K19</a>
-                          <div class="preview__model">LIFAN</div>
-                          <div class="preview__price"><span>120 950 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools">
-                          <button class="btn btn--dashed ic-compare_black preview__compare"><span>В сравнение</span></button>
-                          <button class="btn btn--dashed ic-heart_black preview__wishlist"><span>В избранное</span></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview preview--custom">
-                        <div class="preview__caption">
-                          <button class="btn preview__buy ic-cart_black"></button>
-                          <div class="preview__colors"><img class="color-picker active" src="./img/colors/black_red.svg" alt="" data-color="Черно-красный"><img class="color-picker" src="./img/colors/black.svg" alt="" data-color="Черный"><img class="color-picker" src="./img/colors/black_blue.svg" alt="" data-color="Черно-синий">
-                          </div><a class="preview__images" href="./product-big.html"><img class="active" width="312" height="202" src="./img/products/3.png" alt="" data-color="Черно-красный"><img width="312" height="202" src="./img/products/1.png" alt="" data-color="Черный"><img width="312" height="202" src="./img/products/2.png" alt="" data-color="Черно-синий"></a><a class="preview__name title" href="./product-big.html">XY 250GY-6B CROSS</a>
-                          <div class="preview__model">SHINERAY</div>
-                          <div class="preview__price"><span>44 212 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools">
-                          <button class="btn btn--dashed ic-compare_black preview__compare"><span>В сравнение</span></button>
-                          <button class="btn btn--dashed ic-heart_black preview__wishlist"><span>В избранное</span></button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-pagination"></div>
-              </div>
-              <div class="populars__tab productsListCustom swiper-container swiper-blured swiper-visible tabs__content" data-tab="populars_tab5"> 
-                <div class="swiper-button-prev"></div>
-                <div class="populars__products swiper-wrapper">
-                  <div class="swiper-slide">
-                      <div class="preview preview--custom">
-                        <div class="preview__caption">
-                          <button class="btn preview__buy ic-cart_black"></button>
-                          <div class="preview__colors"><img class="color-picker active" src="./img/colors/black.svg" alt="" data-color="Черный"><img class="color-picker" src="./img/colors/black_blue.svg" alt="" data-color="Черно-синий"><img class="color-picker" src="./img/colors/black_red.svg" alt="" data-color="Черно-красный">
-                          </div><a class="preview__images" href="./product-big.html"><img class="active" width="312" height="202" src="./img/products/1.png" alt="" data-color="Черный"><img width="312" height="202" src="./img/products/2.png" alt="" data-color="Черно-синий"><img width="312" height="202" src="./img/products/3.png" alt="" data-color="Черно-красный"></a><a class="preview__name title" href="./product-big.html">PANIGALE V2</a>
-                          <div class="preview__model">DUCATI</div>
-                          <div class="preview__price"><span>250 000 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools">
-                          <button class="btn btn--dashed ic-compare_black preview__compare"><span>В сравнение</span></button>
-                          <button class="btn btn--dashed ic-heart_black preview__wishlist"><span>В избранное</span></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview preview--custom">
-                        <div class="preview__caption">
-                          <button class="btn preview__buy ic-cart_black"></button>
-                          <div class="preview__colors"><img class="color-picker active" src="./img/colors/black_blue.svg" alt="" data-color="Черно-синий"><img class="color-picker" src="./img/colors/black_red.svg" alt="" data-color="Черно-красный"><img class="color-picker" src="./img/colors/black.svg" alt="" data-color="Черный">
-                          </div><a class="preview__images" href="./product-big.html"><img class="active" width="312" height="202" src="./img/products/2.png" alt="" data-color="Черно-синий"><img width="312" height="202" src="./img/products/3.png" alt="" data-color="Черно-красный"><img width="312" height="202" src="./img/products/1.png" alt="" data-color="Черный"></a><a class="preview__name title" href="./product-big.html">LF 200-14F K19</a>
-                          <div class="preview__model">LIFAN</div>
-                          <div class="preview__price"><span>120 950 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools">
-                          <button class="btn btn--dashed ic-compare_black preview__compare"><span>В сравнение</span></button>
-                          <button class="btn btn--dashed ic-heart_black preview__wishlist"><span>В избранное</span></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview preview--custom">
-                        <div class="preview__caption">
-                          <button class="btn preview__buy ic-cart_black"></button>
-                          <div class="preview__colors"><img class="color-picker active" src="./img/colors/black_red.svg" alt="" data-color="Черно-красный"><img class="color-picker" src="./img/colors/black.svg" alt="" data-color="Черный"><img class="color-picker" src="./img/colors/black_blue.svg" alt="" data-color="Черно-синий">
-                          </div><a class="preview__images" href="./product-big.html"><img class="active" width="312" height="202" src="./img/products/3.png" alt="" data-color="Черно-красный"><img width="312" height="202" src="./img/products/1.png" alt="" data-color="Черный"><img width="312" height="202" src="./img/products/2.png" alt="" data-color="Черно-синий"></a><a class="preview__name title" href="./product-big.html">XY 250GY-6B CROSS</a>
-                          <div class="preview__model">SHINERAY</div>
-                          <div class="preview__price"><span>44 212 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools">
-                          <button class="btn btn--dashed ic-compare_black preview__compare"><span>В сравнение</span></button>
-                          <button class="btn btn--dashed ic-heart_black preview__wishlist"><span>В избранное</span></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview preview--custom">
-                        <div class="preview__caption">
-                          <button class="btn preview__buy ic-cart_black"></button>
-                          <div class="preview__colors"><img class="color-picker active" src="./img/colors/black.svg" alt="" data-color="Черный"><img class="color-picker" src="./img/colors/black_blue.svg" alt="" data-color="Черно-синий"><img class="color-picker" src="./img/colors/black_red.svg" alt="" data-color="Черно-красный">
-                          </div><a class="preview__images" href="./product-big.html"><img class="active" width="312" height="202" src="./img/products/1.png" alt="" data-color="Черный"><img width="312" height="202" src="./img/products/2.png" alt="" data-color="Черно-синий"><img width="312" height="202" src="./img/products/3.png" alt="" data-color="Черно-красный"></a><a class="preview__name title" href="./product-big.html">PANIGALE V2</a>
-                          <div class="preview__model">DUCATI</div>
-                          <div class="preview__price"><span>250 000 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools">
-                          <button class="btn btn--dashed ic-compare_black preview__compare"><span>В сравнение</span></button>
-                          <button class="btn btn--dashed ic-heart_black preview__wishlist"><span>В избранное</span></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview preview--custom">
-                        <div class="preview__caption">
-                          <button class="btn preview__buy ic-cart_black"></button>
-                          <div class="preview__colors"><img class="color-picker active" src="./img/colors/black_blue.svg" alt="" data-color="Черно-синий"><img class="color-picker" src="./img/colors/black_red.svg" alt="" data-color="Черно-красный"><img class="color-picker" src="./img/colors/black.svg" alt="" data-color="Черный">
-                          </div><a class="preview__images" href="./product-big.html"><img class="active" width="312" height="202" src="./img/products/2.png" alt="" data-color="Черно-синий"><img width="312" height="202" src="./img/products/3.png" alt="" data-color="Черно-красный"><img width="312" height="202" src="./img/products/1.png" alt="" data-color="Черный"></a><a class="preview__name title" href="./product-big.html">LF 200-14F K19</a>
-                          <div class="preview__model">LIFAN</div>
-                          <div class="preview__price"><span>120 950 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools">
-                          <button class="btn btn--dashed ic-compare_black preview__compare"><span>В сравнение</span></button>
-                          <button class="btn btn--dashed ic-heart_black preview__wishlist"><span>В избранное</span></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview preview--custom">
-                        <div class="preview__caption">
-                          <button class="btn preview__buy ic-cart_black"></button>
-                          <div class="preview__colors"><img class="color-picker active" src="./img/colors/black_red.svg" alt="" data-color="Черно-красный"><img class="color-picker" src="./img/colors/black.svg" alt="" data-color="Черный"><img class="color-picker" src="./img/colors/black_blue.svg" alt="" data-color="Черно-синий">
-                          </div><a class="preview__images" href="./product-big.html"><img class="active" width="312" height="202" src="./img/products/3.png" alt="" data-color="Черно-красный"><img width="312" height="202" src="./img/products/1.png" alt="" data-color="Черный"><img width="312" height="202" src="./img/products/2.png" alt="" data-color="Черно-синий"></a><a class="preview__name title" href="./product-big.html">XY 250GY-6B CROSS</a>
-                          <div class="preview__model">SHINERAY</div>
-                          <div class="preview__price"><span>44 212 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools">
-                          <button class="btn btn--dashed ic-compare_black preview__compare"><span>В сравнение</span></button>
-                          <button class="btn btn--dashed ic-heart_black preview__wishlist"><span>В избранное</span></button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-pagination"></div>
-              </div>
             </div>
           </div>
         </div>
@@ -910,15 +748,11 @@
         <div class="container">
           <div class="heading">ЗАПЧАСТИ И ЭКИПИРОВКА</div>
           <div class="tabs">
-            <div class="equipments__buttons tabs__buttons swiper-container">
-              <div class="swiper-wrapper">
-                <button class="btn swiper-slide tabs__btn tabs__btn--active" data-tab="equipments_tab1">Шлемы</button>
-                <button class="btn swiper-slide tabs__btn" data-tab="equipments_tab2">Куртки</button>
-                <button class="btn swiper-slide tabs__btn" data-tab="equipments_tab3">Штаны</button>
-                <button class="btn swiper-slide tabs__btn" data-tab="equipments_tab4">Защита</button>
-                <button class="btn swiper-slide tabs__btn" data-tab="equipments_tab5">Обувь</button>
-                <button class="btn swiper-slide tabs__btn" data-tab="equipments_tab6">Смотреть все</button>
-              </div>
+            <div class="equipments__buttons tabs__buttons">
+              <button class="btn tabs__btn tabs__btn--active" data-tab="equipments_tab1">Шлемы</button>
+              <button class="btn tabs__btn" data-tab="equipments_tab2">Куртки</button>
+              <button class="btn tabs__btn" data-tab="equipments_tab3">Штаны</button>
+              <button class="btn tabs__btn" data-tab="equipments_tab4">Смотреть все</button>
             </div>
             <div class="equipments__tabs tabs">
               <div class="equipments__tab productsListDefault swiper-container swiper-blured swiper-visible tabs__content tabs__content--active" data-tab="equipments_tab1">
@@ -1397,244 +1231,6 @@
                 <div class="swiper-button-next"></div>
                 <div class="swiper-pagination"></div>
               </div>
-              <div class="equipments__tab productsListDefault swiper-container swiper-blured swiper-visible tabs__content" data-tab="equipments_tab5">
-                <div class="swiper-button-prev"></div>
-                <div class="equipments__products swiper-wrapper">
-                  <div class="swiper-slide">
-                      <div class="preview"><a class="preview__thumb" href="./product.html"><img width="208" height="194" src="./img/products/4.png" alt=""></a>
-                        <div class="preview__caption"><a class="preview__name title" href="./product.html"> DRAKEN MP4 C4 Matt Fluor Orange</a>
-                          <div class="preview__model">AXXIS</div>
-                          <div class="preview__price"><span class="preview__special">3250 ₴</span><span>2500.50 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools"><a class="btn btn--default" href="./product.html">купить</a></div>
-                        <div class="preview__actions">
-                          <button class="btn ic-compare_black preview__compare"></button>
-                          <button class="btn ic-heart_black preview__wishlist"></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview"><a class="preview__thumb" href="./product.html"><img width="208" height="194" src="./img/products/5.png" alt=""></a>
-                        <div class="preview__caption"><a class="preview__name title" href="./product.html">FF353 Rapid Cromo Matt Fluo</a>
-                          <div class="preview__model">LS2</div>
-                          <div class="preview__price"><span>2548 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools"><a class="btn btn--default" href="./product.html">купить</a></div>
-                        <div class="preview__actions">
-                          <button class="btn ic-compare_black preview__compare"></button>
-                          <button class="btn ic-heart_black preview__wishlist"></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview"><a class="preview__thumb" href="./product.html"><img width="208" height="194" src="./img/products/6.png" alt=""></a>
-                        <div class="preview__caption"><a class="preview__name title" href="./product.html">FF353 Rapid Naughty Matt Black</a>
-                          <div class="preview__model">LS2</div>
-                          <div class="preview__price"><span>2538.90 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools"><a class="btn btn--default" href="./product.html">купить</a></div>
-                        <div class="preview__actions">
-                          <button class="btn ic-compare_black preview__compare"></button>
-                          <button class="btn ic-heart_black preview__wishlist"></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview"><a class="preview__thumb" href="./product.html"><img width="208" height="194" src="./img/products/7.png" alt=""></a>
-                        <div class="preview__caption"><a class="preview__name title" href="./product.html">Joker Gloss White</a>
-                          <div class="preview__model">MT TARGO</div>
-                          <div class="preview__price"><span class="preview__special">3250 ₴</span><span>2790 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools"><a class="btn btn--default" href="./product.html">купить</a></div>
-                        <div class="preview__actions">
-                          <button class="btn ic-compare_black preview__compare"></button>
-                          <button class="btn ic-heart_black preview__wishlist"></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview"><a class="preview__thumb" href="./product.html"><img width="208" height="194" src="./img/products/4.png" alt=""></a>
-                        <div class="preview__caption"><a class="preview__name title" href="./product.html"> DRAKEN MP4 C4 Matt Fluor Orange</a>
-                          <div class="preview__model">AXXIS</div>
-                          <div class="preview__price"><span>2500.50 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools"><a class="btn btn--default" href="./product.html">купить</a></div>
-                        <div class="preview__actions">
-                          <button class="btn ic-compare_black preview__compare"></button>
-                          <button class="btn ic-heart_black preview__wishlist"></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview"><a class="preview__thumb" href="./product.html"><img width="208" height="194" src="./img/products/5.png" alt=""></a>
-                        <div class="preview__caption"><a class="preview__name title" href="./product.html">FF353 Rapid Cromo Matt Fluo</a>
-                          <div class="preview__model">LS2</div>
-                          <div class="preview__price"><span>2548 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools"><a class="btn btn--default" href="./product.html">купить</a></div>
-                        <div class="preview__actions">
-                          <button class="btn ic-compare_black preview__compare"></button>
-                          <button class="btn ic-heart_black preview__wishlist"></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview"><a class="preview__thumb" href="./product.html"><img width="208" height="194" src="./img/products/6.png" alt=""></a>
-                        <div class="preview__caption"><a class="preview__name title" href="./product.html">FF353 Rapid Naughty Matt Black</a>
-                          <div class="preview__model">LS2</div>
-                          <div class="preview__price"><span>2538.90 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools"><a class="btn btn--default" href="./product.html">купить</a></div>
-                        <div class="preview__actions">
-                          <button class="btn ic-compare_black preview__compare"></button>
-                          <button class="btn ic-heart_black preview__wishlist"></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview"><a class="preview__thumb" href="./product.html"><img width="208" height="194" src="./img/products/7.png" alt=""></a>
-                        <div class="preview__caption"><a class="preview__name title" href="./product.html">Joker Gloss White</a>
-                          <div class="preview__model">MT TARGO</div>
-                          <div class="preview__price"><span>2790 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools"><a class="btn btn--default" href="./product.html">купить</a></div>
-                        <div class="preview__actions">
-                          <button class="btn ic-compare_black preview__compare"></button>
-                          <button class="btn ic-heart_black preview__wishlist"></button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-pagination"></div>
-              </div>
-              <div class="equipments__tab productsListDefault swiper-container swiper-blured swiper-visible tabs__content" data-tab="equipments_tab6">
-                <div class="swiper-button-prev"></div>
-                <div class="equipments__products swiper-wrapper">
-                  <div class="swiper-slide">
-                      <div class="preview"><a class="preview__thumb" href="./product.html"><img width="208" height="194" src="./img/products/4.png" alt=""></a>
-                        <div class="preview__caption"><a class="preview__name title" href="./product.html"> DRAKEN MP4 C4 Matt Fluor Orange</a>
-                          <div class="preview__model">AXXIS</div>
-                          <div class="preview__price"><span class="preview__special">3250 ₴</span><span>2500.50 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools"><a class="btn btn--default" href="./product.html">купить</a></div>
-                        <div class="preview__actions">
-                          <button class="btn ic-compare_black preview__compare"></button>
-                          <button class="btn ic-heart_black preview__wishlist"></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview"><a class="preview__thumb" href="./product.html"><img width="208" height="194" src="./img/products/5.png" alt=""></a>
-                        <div class="preview__caption"><a class="preview__name title" href="./product.html">FF353 Rapid Cromo Matt Fluo</a>
-                          <div class="preview__model">LS2</div>
-                          <div class="preview__price"><span>2548 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools"><a class="btn btn--default" href="./product.html">купить</a></div>
-                        <div class="preview__actions">
-                          <button class="btn ic-compare_black preview__compare"></button>
-                          <button class="btn ic-heart_black preview__wishlist"></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview"><a class="preview__thumb" href="./product.html"><img width="208" height="194" src="./img/products/6.png" alt=""></a>
-                        <div class="preview__caption"><a class="preview__name title" href="./product.html">FF353 Rapid Naughty Matt Black</a>
-                          <div class="preview__model">LS2</div>
-                          <div class="preview__price"><span>2538.90 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools"><a class="btn btn--default" href="./product.html">купить</a></div>
-                        <div class="preview__actions">
-                          <button class="btn ic-compare_black preview__compare"></button>
-                          <button class="btn ic-heart_black preview__wishlist"></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview"><a class="preview__thumb" href="./product.html"><img width="208" height="194" src="./img/products/7.png" alt=""></a>
-                        <div class="preview__caption"><a class="preview__name title" href="./product.html">Joker Gloss White</a>
-                          <div class="preview__model">MT TARGO</div>
-                          <div class="preview__price"><span class="preview__special">3250 ₴</span><span>2790 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools"><a class="btn btn--default" href="./product.html">купить</a></div>
-                        <div class="preview__actions">
-                          <button class="btn ic-compare_black preview__compare"></button>
-                          <button class="btn ic-heart_black preview__wishlist"></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview"><a class="preview__thumb" href="./product.html"><img width="208" height="194" src="./img/products/4.png" alt=""></a>
-                        <div class="preview__caption"><a class="preview__name title" href="./product.html"> DRAKEN MP4 C4 Matt Fluor Orange</a>
-                          <div class="preview__model">AXXIS</div>
-                          <div class="preview__price"><span>2500.50 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools"><a class="btn btn--default" href="./product.html">купить</a></div>
-                        <div class="preview__actions">
-                          <button class="btn ic-compare_black preview__compare"></button>
-                          <button class="btn ic-heart_black preview__wishlist"></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview"><a class="preview__thumb" href="./product.html"><img width="208" height="194" src="./img/products/5.png" alt=""></a>
-                        <div class="preview__caption"><a class="preview__name title" href="./product.html">FF353 Rapid Cromo Matt Fluo</a>
-                          <div class="preview__model">LS2</div>
-                          <div class="preview__price"><span>2548 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools"><a class="btn btn--default" href="./product.html">купить</a></div>
-                        <div class="preview__actions">
-                          <button class="btn ic-compare_black preview__compare"></button>
-                          <button class="btn ic-heart_black preview__wishlist"></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview"><a class="preview__thumb" href="./product.html"><img width="208" height="194" src="./img/products/6.png" alt=""></a>
-                        <div class="preview__caption"><a class="preview__name title" href="./product.html">FF353 Rapid Naughty Matt Black</a>
-                          <div class="preview__model">LS2</div>
-                          <div class="preview__price"><span>2538.90 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools"><a class="btn btn--default" href="./product.html">купить</a></div>
-                        <div class="preview__actions">
-                          <button class="btn ic-compare_black preview__compare"></button>
-                          <button class="btn ic-heart_black preview__wishlist"></button>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="swiper-slide">
-                      <div class="preview"><a class="preview__thumb" href="./product.html"><img width="208" height="194" src="./img/products/7.png" alt=""></a>
-                        <div class="preview__caption"><a class="preview__name title" href="./product.html">Joker Gloss White</a>
-                          <div class="preview__model">MT TARGO</div>
-                          <div class="preview__price"><span>2790 ₴</span>
-                          </div>
-                        </div>
-                        <div class="preview__tools"><a class="btn btn--default" href="./product.html">купить</a></div>
-                        <div class="preview__actions">
-                          <button class="btn ic-compare_black preview__compare"></button>
-                          <button class="btn ic-heart_black preview__wishlist"></button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-pagination"></div>
-              </div>
             </div>
           </div>
         </div>
@@ -1672,7 +1268,7 @@
               <p>Мы специализируемся на прямых поставках мототехники в Украину и работаем без посредников, а следовательно — можем предложить самые низкие цены на весь ассортимент техники и товаров для наших клиентов. Придя в наш салон, который находится по адресу г. Харьков, ул. Академика Павлова 51, Вы сможете увидеть большой выбор мотоциклов, квадроциклов, скутеров и прочих сопутствующих товаров.Также, под заказ мы можем привезти любую интересующую Вас технику. Мы предлагаем купить японский мопед таких фирм как: Honda, Suzuki, Yamaha.</p><a class="btn btn--prim" href="./about.html">подробнее об artmoto</a>
             </div>
           </div>
-          <div class="about__images"> <img src="./img/banners/about1.jpg" alt="" data-aos="zoom-in-up" data-aos-duration="500" data-aos-anchor-placement="top-center"><img src="./img/banners/about2.jpg" alt="" data-aos="zoom-in-right" data-aos-duration="500" data-aos-anchor-placement="top-center"><img src="./img/banners/about3.jpg" alt="" data-aos="zoom-in-down" data-aos-duration="500" data-aos-anchor-placement="top-center"></div>
+          <div class="about__images"> <img src="./img/banners/about1.jpg" alt="" data-aos="zoom-in-up" data-aos-duration="500"><img src="./img/banners/about2.jpg" alt="" data-aos="zoom-in-right" data-aos-duration="500"><img src="./img/banners/about3.jpg" alt="" data-aos="zoom-in-down" data-aos-duration="500"></div>
         </div>
       </section>
       <section class="blog" data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-center">
@@ -1796,8 +1392,7 @@
       <div class="container">
         <div class="footer__inner">
           <div class="footer__col footer__catalog">
-            <div class="footer__title">Каталог</div>
-            <button class="btn ic-arrow_down visible-xs footer__opener"></button>
+            <div class="footer__title footer__opener ic-arrow_down">Каталог</div>
             <ul class="footer__list">
               <li class="footer__target"><a href="./catalog.html">SALE</a></li>
               <li><a href="./catalog.html">Б/У техника</a></li>
@@ -1814,8 +1409,7 @@
             </ul>
           </div>
           <div class="footer__col footer__info">
-            <div class="footer__title">Информация</div>
-            <button class="btn ic-arrow_down visible-xs footer__opener"></button>
+            <div class="footer__title footer__opener ic-arrow_down">Информация</div>
             <ul class="footer__list">
               <li><a href="./about.html">О компании</a></li>
               <li><a href="./blog.html">Новости</a></li>
@@ -1835,8 +1429,7 @@
             </div>
           </div>
           <div class="footer__col footer__buyer">
-            <div class="footer__title">Покупателю</div>
-            <button class="btn ic-arrow_down visible-xs footer__opener"></button>
+            <div class="footer__title footer__opener ic-arrow_down">Покупателю</div>
             <ul class="footer__list">
               <li><a href="#">Связаться с нами</a></li>
               <li><a href="#">Возврат товара</a></li>
@@ -1847,8 +1440,7 @@
             </ul>
           </div>
           <div class="footer__col footer__contacts">
-            <div class="footer__title">Контакты</div>
-            <button class="btn ic-arrow_down visible-xs footer__opener"></button>
+            <div class="footer__title footer__opener ic-arrow_down">Контакты</div>
             <ul class="footer__list">
               <li><a href="#">Магазины</a></li>
               <li><a href="#">Мотосервисы</a></li>
@@ -1878,6 +1470,7 @@
         </div>
       </div>
     </footer>
+    <button class="btn ic-top" id="top"></button>
     <div class="modal" id="modalCredits"> 
       <div class="modal__win scroll">
         <button class="btn modal__close ic-close_modal"></button>
@@ -2145,10 +1738,10 @@
     <script src="./libs/nouislider/nouislider.min.js"></script>
     <script src="./libs/view_360/js-cloudimage-360-view.min.js"></script>
     <script src="./libs/lazysizes/lazysizes.min.js"></script>
-    <script src="./libs/jquery/jquery.min.js"></script>
-    <script src="./libs/lightbox/jquery.fancybox.min.js"></script>
-    <script src="./libs/mask/imask.min.js"></script><script src="js/main.js"></script>    <link rel="stylesheet" data-style="swiper" href="./css/libs/swiper-bundle.min.css">
+    <script src="./libs/lightbox/glightbox.min.js"></script>
+    <script src="./libs/mask/imask.min.js"></script>
+    <script src="./libs/lazyload/lazyload.min.js"></script><script src="js/main.js"></script>    <link rel="stylesheet" data-style="swiper" href="./css/libs/swiper-bundle.min.css">
     <link rel="stylesheet" data-style="aos" href="./css/libs/aos.css">
     <link rel="stylesheet" data-style="nouislider" href="./css/libs/nouislider.css">
-    <link rel="stylesheet" data-style="fancybox" href="./css/libs/jquery.fancybox.min.css"><link rel="stylesheet" href="css/style.css">  </body>
+    <link rel="stylesheet" data-style="fancybox" href="./css/libs/glightbox.min.css"><link rel="stylesheet" href="css/style.css">  </body>
 </html>

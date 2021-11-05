@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Program</title>
+
+	<link href="libs/slick/slick.css" rel="stylesheet">
+	<link href="libs/slick/slick-theme.css" rel="stylesheet">
+
+	<!--[if IE 9]><link rel="stylesheet" href="css/oldIE.css"><![endif]-->
+	<link rel="stylesheet" href="css/style.min.css">
+
+
+	
+	
+</head>
+<body class="column">
+	<header class="header container">
+		<div class="header__tool">
+			<div class="header__langs">
+				<ul>
+					<li class="header__langActive">
+						<a href="#">УКР</a>
+					</li>
+					<li>
+						<a href="#">РУС</a>
+					</li>
+				</ul>
+			</div>
+			<div class="header__soc">
+				<ul>
+					<li>
+						<a href="#" target="_blank" class="icon__tel"></a>
+					</li>
+					<li>
+						<a href="#" target="_blank" class="icon__vib"></a>
+					</li>
+					<li>
+						<a href="#" target="_blank" class="icon__ig"></a>
+					</li>
+					<li>
+						<a href="#" target="_blank" class="icon__fb"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="header__nav">
+				<ul>
+					<li>
+						<a href="#">Доставка</a>
+					</li>
+					<li>
+						<a href="#">Повернення та обмін</a>
+					</li>
+					<li>
+						<a href="#">Оплата та кредит</a>
+					</li>
+					<li>
+						<a href="#">Дисконтна програма</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="header__inner">
+			<div class="header__logo">
+				<a href="/">
+					<img src="img/logo.svg" alt="">
+				</a>
+			</div>
+			<div class="header__innerRight">
+				<div class="header__search">
+					<form action="#">
+						<input type="text" placeholder="Шукаю" name="search" class="input">
+						<button class="btn cursor icon__search">Пошук</button>
+					</form>
+				</div>
+				<div class="header__log">
+					<a href="#" class="open_modal_login icon__ava">Особистий кабінет</a>
+				</div>
+
+
+				<!-- сравнение товаров -->
+				<div class="headerComp">
+					<div class="headerComp__link icon__compare">
+						<a class="headerComp__linkMobile" href="/compare"></a>
+						<span class="headerComp__count">5</span>
+					</div>
+
+					<!-- выпадающий блок -->
+					<div class="headerCart__itemsWrap headerCart__itemsWrap--comp headerCart__itemsWrap--noempty">
+
+						<!-- если в списке сравнения нет товаров -->
+						<div class="headerCart__items headerCart__items--empty">
+							<div class="headerCart__list">Список порiняння порожнiй!</div>
+						</div>
+
+						<!-- если в списке сравнения есть товары -->
+						<div class="headerCart__items headerCart__items--noEmpty">
+							<div class="headerCart__list scroll">
+								<div class="headerCart__item">
+									<div class="headerCart__thumb">
+										<img src="img/cart/Image-1.png" alt="">
+									</div>
+									<a href="#" class="headerCart__name">
+										Мобільний телефон Apple iPhone SE 64GB (2020) White
+									</a>
+									<div class="headerCart__totalPrice">
+										14 499 грн
+									</div>
+								</div>
+								<div class="headerCart__item">
+									<div class="headerCart__thumb">
+										<img src="img/cart/Image-1.png" alt="">
+									</div>
+									<a href="#" class="headerCart__name">
+										Мобільний телефон Apple iPhone SE 64GB (2020) White
+									</a>
+									<div class="headerCart__totalPrice">
+										14 499 грн
+									</div>
+								</div>
+								<div class="headerCart__item">
+									<div class="headerCart__thumb">
+										<img src="img/cart/Image-1.png" alt="">
+									</div>
+									<a href="#" class="headerCart__name">
+										Мобільний телефон Apple iPhone SE 64GB (2020) White
+									</a>
+									<div class="headerCart__totalPrice">
+										14 499 грн
+									</div>
+								</div>
+								<div class="headerCart__item">
+									<div class="headerCart__thumb">
+										<img src="img/cart/Image-1.png" alt="">
+									</div>
+									<a href="#" class="headerCart__name">
+										Мобільний телефон Apple iPhone SE 64GB (2020) White
+									</a>
+									<div class="headerCart__totalPrice">
+										14 499 грн
+									</div>
+								</div>
+							</div>
+							<div class="headerCart__btns">
+								<a href="/compare" class="headerCart__checkout btn btn--yellow">Порiвняти</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- список избранного -->
+				<div class="headerWish headerCart">
+
+					<!-- если не авторизован -->
+					<!-- <a href="/login" class="icon__heart"></a> -->
+
+					<!-- если авторизован -->
+					<div class="headerWish__link icon__heart">
+						<a class="headerWish__linkMobile" href="/wishlist"></a> <!-- переход на страницу избранного для мобильных -->
+					</div>
+
+
+					<!-- выпадающий блок -->
+					<div class="headerCart__itemsWrap headerCart__itemsWrap--wish headerCart__itemsWrap--noempty">
+
+						<!-- если в списке избранного нет товаров -->
+						<div class="headerCart__items headerCart__items--empty">
+							<div class="headerCart__list">Список обраного порожнiй!</div>
+						</div>
+
+						<!-- если в списке избранного есть товары -->
+						<div class="headerCart__items headerCart__items--noEmpty">
+							<div class="headerCart__list scroll">
+
+								<div class="headerCart__item">
+									<div class="headerCart__thumb">
+										<img src="img/cart/Image-1.png" alt="">
+									</div>
+									<a href="#" class="headerCart__name">
+										Мобільний телефон Apple iPhone SE 64GB (2020) White
+									</a>
+									<div class="headerCart__totalPrice">
+										14 499 грн
+									</div>
+								</div>
+								<div class="headerCart__item">
+									<div class="headerCart__thumb">
+										<img src="img/cart/Image-1.png" alt="">
+									</div>
+									<a href="#" class="headerCart__name">
+										Мобільний телефон Apple iPhone SE 64GB (2020) White
+									</a>
+									<div class="headerCart__totalPrice">
+										14 499 грн
+									</div>
+								</div>
+								<div class="headerCart__item">
+									<div class="headerCart__thumb">
+										<img src="img/cart/Image-1.png" alt="">
+									</div>
+									<a href="#" class="headerCart__name">
+										Мобільний телефон Apple iPhone SE 64GB (2020) White
+									</a>
+									<div class="headerCart__totalPrice">
+										14 499 грн
+									</div>
+								</div>
+								<div class="headerCart__item">
+									<div class="headerCart__thumb">
+										<img src="img/cart/Image-1.png" alt="">
+									</div>
+									<a href="#" class="headerCart__name">
+										Мобільний телефон Apple iPhone SE 64GB (2020) White
+									</a>
+									<div class="headerCart__totalPrice">
+										14 499 грн
+									</div>
+								</div>
+							</div>
+							<div class="headerCart__btns">
+								<a href="/wishlist" class="headerCart__checkout btn btn--yellow">Перейти до списку обраного</a>
+							</div>
+						</div>
+					</div>	
+				</div>
+
+
+				<!-- корзина товаров -->
+				<div class="headerCart">
+					<div class="headerCart__link icon__cartFull cursor"> <!-- если корзина пустая - icon__cartEmpty -->
+						<span class="headerCart__count">1</span> <!-- если корзина пустая - не выводить это -->
+
+						<span class="headerCart__title">Кошик</span>
+						<span class="headerCart__subtitle">
+							<span>1</span> товар
+						</span>
+						<div class="headerCart__linkMobile"></div>
+					</div>
+
+					<!-- выпадающий блок -->
+					<div class="headerCart__itemsWrap headerCart__itemsWrap--cart headerCart__itemsWrap--noempty">
+
+						<!-- если корзина пустая -->
+						<div class="headerCart__items headerCart__items--empty">
+							<div class="headerCart__list">Ваш кошик порожнiй!</div>
+						</div>
+
+						<!-- если в корзине есть товары -->
+						<div class="headerCart__items headerCart__items--noEmpty">
+							<div class="headerCart__list scroll">
+
+								<div class="headerCart__item">
+									<div class="headerCart__thumb">
+										<img src="img/cart/Image-1.png" alt="">
+									</div>
+									<a href="#" class="headerCart__name">
+										Мобільний телефон Apple iPhone SE 64GB (2020) White
+									</a>
+									<div class="headerCart__price">
+										14 499 грн
+									</div>
+									<div class="headerCart__quantly">
+										х1
+									</div>
+									<div class="headerCart__totalPrice">
+										14 499 грн
+									</div>
+								</div>
+
+								<div class="headerCart__item">
+									<div class="headerCart__thumb">
+										<img src="img/cart/Image.png" alt="">
+									</div>
+									<a href="#" class="headerCart__name">
+										Мобільний телефон Samsung Galaxy A71 6/128 GB Metallic Silver
+									</a>
+									<div class="headerCart__price">
+										9 999 грн
+									</div>
+									<div class="headerCart__quantly">
+										х1
+									</div>
+									<div class="headerCart__totalPrice">
+										9 999 грн
+									</div>
+								</div>
+
+								<div class="headerCart__item">
+									<div class="headerCart__thumb">
+										<img src="img/cart/Image-1.png" alt="">
+									</div>
+									<a href="#" class="headerCart__name">
+										Мобільний телефон Apple iPhone SE 64GB (2020) White
+									</a>
+									<div class="headerCart__price">
+										14 499 грн
+									</div>
+									<div class="headerCart__quantly">
+										х1
+									</div>
+									<div class="headerCart__totalPrice">
+										14 499 грн
+									</div>
+								</div>
+
+								<div class="headerCart__item">
+									<div class="headerCart__thumb">
+										<img src="img/cart/Image.png" alt="">
+									</div>
+									<a href="#" class="headerCart__name">
+										Мобільний телефон Samsung Galaxy A71 6/128 GB Metallic Silver
+									</a>
+									<div class="headerCart__price">
+										9 999 грн
+									</div>
+									<div class="headerCart__quantly">
+										х1
+									</div>
+									<div class="headerCart__totalPrice">
+										9 999 грн
+									</div>
+								</div>
+
+							</div>
+							<div class="headerCart__total">
+								<div class="headerCart__totalLabel">Товарів на сумму:</div>
+								<div class="headerCart__cost">24 498 грн</div>
+							</div>
+							<div class="headerCart__btns">
+								<a href="#" class="headerCart__checkout btn btn--yellow">Оформити замовлення</a>
+								<a href="#" class="open_modal_cart headerCart__cart">Перейти до кошика</a> 
+							</div>
+						</div>
+					</div>						
+				</div>
+
+				<!-- кнопка вызова мобильного меню -->
+				<button id="mobile_menu_open" class="header__mobMenu btn icon__burger"></button>
+
+			</div>
+
+			
+		</div>
+
+		<!-- поиск для мобильных -->
+		<div class="header__mobSearch">
+			<form action="#">
+				<input type="text" placeholder="Шукаю" name="search" class="input">
+				<button class="icon__search btn cursor"></button>
+			</form>
+		</div>
+	</header>
+
+	<section class="top container">
+
+		<button class="topCatalogMobile open_catalog btn">Каталог товарів</button> <!-- кнопка для мобильных -->
+
+		<div class="topCatalog">
+			<div class="topCatalog__btn topCatalog__title cursor">
+				Каталог товарів
+				<button class="close_catalog topCatalog__close icon__close close btn"></button>
+				<nav class="topCatalogMenu">
+					<ul class="scroll scroll--catalog">
+						<li class="topCatalogMenu__hasChild">
+							<a href="/category.html">
+								<div class="topCatalogMenu__ic">
+									<img src="img/icons/catalog/ic_2.svg" alt="">
+								</div>							
+								<span class="topCatalogMenu__title">Автомобільні аксесуари</span>
+								<button class="topCatalogMenu__arr open_catalog_child icon__right btn"></button>
+							</a>
+							<div class="topCatalogChild scroll scroll--catalog">
+								<div class="topCatalogChild__items">
+
+									<div class="topCatalogChild__item">
+										<a href="link2" class="topCatalogChild__name">Телефони, Смартфони</a>
+										<button class="topCatalogMenu__arr open_child_child icon__right btn"></button>
+									</div>
+
+									<div class="topCatalogChild__item topCatalogChild__item--hasChild">
+										<a href="link3" class="topCatalogChild__name">Смартфони Apple</a>
+										<button class="topCatalogMenu__arr open_child_child icon__right btn"></button>
+										<div class="topCatalogChild__list">
+											<ul>
+												<li>
+													<a href="link4">iPhone 11</a>
+												</li>
+												<li>
+													<a href="#">iPhone 12</a>
+												</li>
+												<li>
+													<a href="#">iPhone X Pro Max</a>
+												</li>
+												<li>
+													<a href="#">iPhone 8</a>
+												</li>
+												<li>
+													<a href="#">iPhone 6s</a>
+												</li>
+												<li>
+													<a href="#">iPhone SE</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="topCatalogChild__item topCatalogChild__item--hasChild">
+										<a href="#" class="topCatalogChild__name">Смартфони Samsung</a>
+										<button class="topCatalogMenu__arr open_child_child icon__right btn"></button>
+										<div class="topCatalogChild__list">
+											<ul>
+												<li>
+													<a href="#">Samsung A50</a>
+												</li>
+												<li>
+													<a href="#">Samsung A70</a>
+												</li>
+												<li>
+													<a href="#">Samsung S20</a>
+												</li>
+												<li>
+													<a href="#">Samsung S20</a>
+												</li>
+												<li>
+													<a href="#">Samsung S20</a>
+												</li>
+												<li>
+													<a href="#">Samsung S20</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="topCatalogChild__item">
+										<a href="#" class="topCatalogChild__name">Мобильные телефоны</a>
+										<button class="topCatalogMenu__arr open_child_child icon__right btn"></button>
+									</div>
+								</div>
+
+							</div>
+						</li>
+						<li class="topCatalogMenu__hasChild">
+							<a href="#">
+								<div class="topCatalogMenu__ic">
+									<img src="img/icons/catalog/ic_3.svg" alt="">
+								</div>
+								<span class="topCatalogMenu__title">Зарядні пристрої</span>
+								<button class="topCatalogMenu__arr open_catalog_child icon__right btn"></button>
+							</a>
+							<div class="topCatalogChild scroll scroll--catalog">
+								<div class="topCatalogChild__items">
+
+									<div class="topCatalogChild__item">
+										<a href="#" class="topCatalogChild__name">Телефони, Смартфони</a>
+										<button class="topCatalogMenu__arr open_child_child icon__right btn"></button>
+									</div>
+
+									<div class="topCatalogChild__item topCatalogChild__item--hasChild">
+										<a href="#" class="topCatalogChild__name">Смартфони Apple</a>
+										<button class="topCatalogMenu__arr open_child_child icon__right btn"></button>
+										<div class="topCatalogChild__list">
+											<ul>
+												<li>
+													<a href="#">iPhone 11</a>
+												</li>
+												<li>
+													<a href="#">iPhone 12</a>
+												</li>
+												<li>
+													<a href="#">iPhone X Pro Max</a>
+												</li>
+												<li>
+													<a href="#">iPhone 8</a>
+												</li>
+												<li>
+													<a href="#">iPhone 6s</a>
+												</li>
+												<li>
+													<a href="#">iPhone SE</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="topCatalogChild__item topCatalogChild__item--hasChild">
+										<a href="#" class="topCatalogChild__name">Смартфони Samsung</a>
+										<button class="topCatalogMenu__arr open_child_child icon__right btn"></button>
+										<div class="topCatalogChild__list">
+											<ul>
+												<li>
+													<a href="#">Samsung A50</a>
+												</li>
+												<li>
+													<a href="#">Samsung A70</a>
+												</li>
+												<li>
+													<a href="#">Samsung S20</a>
+												</li>
+												<li>
+													<a href="#">Samsung S20</a>
+												</li>
+												<li>
+													<a href="#">Samsung S20</a>
+												</li>
+												<li>
+													<a href="#">Samsung S20</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="topCatalogChild__item topCatalogChild__item--hasChild">
+										<a href="#" class="topCatalogChild__name">Смартфони Samsung</a>
+										<button class="topCatalogMenu__arr open_child_child icon__right btn"></button>
+										<div class="topCatalogChild__list">
+											<ul>
+												<li>
+													<a href="#">Samsung A50</a>
+												</li>
+												<li>
+													<a href="#">Samsung A70</a>
+												</li>
+												<li>
+													<a href="#">Samsung S20</a>
+												</li>
+												<li>
+													<a href="#">Samsung S20</a>
+												</li>
+												<li>
+													<a href="#">Samsung S20</a>
+												</li>
+												<li>
+													<a href="#">Samsung S20</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="topCatalogChild__item topCatalogChild__item--hasChild">
+										<a href="#" class="topCatalogChild__name">Смартфони Samsung</a>
+										<button class="topCatalogMenu__arr open_child_child icon__right btn"></button>
+										<div class="topCatalogChild__list">
+											<ul>
+												<li>
+													<a href="#">Samsung A50</a>
+												</li>
+												<li>
+													<a href="#">Samsung A70</a>
+												</li>
+												<li>
+													<a href="#">Samsung S20</a>
+												</li>
+												<li>
+													<a href="#">Samsung S20</a>
+												</li>
+												<li>
+													<a href="#">Samsung S20</a>
+												</li>
+												<li>
+													<a href="#">Samsung S20</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="topCatalogChild__item topCatalogChild__item--hasChild">
+										<a href="#" class="topCatalogChild__name">Смартфони Vivo</a>
+										<button class="topCatalogMenu__arr open_child_child icon__right btn"></button>
+										<div class="topCatalogChild__list">
+											<ul>
+												<li>
+													<a href="#">Vivo 54</a>
+												</li>
+												<li>
+													<a href="#">Vivo s5</a>
+												</li>
+												<li>
+													<a href="#">Vivo 74</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="topCatalogChild__item">
+										<a href="#" class="topCatalogChild__name">Смартфони Realme</a>
+										<button class="topCatalogMenu__arr open_child_child icon__right btn"></button>
+									</div>
+
+									<div class="topCatalogChild__item topCatalogChild__item--hasChild">
+										<a href="#" class="topCatalogChild__name">Смартфони Xiaomi</a>
+										<button class="topCatalogMenu__arr open_child_child icon__right btn"></button>
+										<div class="topCatalogChild__list">
+											<ul>
+												<li>
+													<a href="#">Xiaomi Redmi 8</a>
+												</li>
+												<li>
+													<a href="#">Xiaomi Redmi 8</a>
+												</li>
+												<li>
+													<a href="#">Xiaomi Redmi 8</a>
+												</li>
+												<li>
+													<a href="#">Xiaomi Redmi 8</a>
+												</li>
+												<li>
+													<a href="#">Xiaomi Redmi 8</a>
+												</li>
+												<li>
+													<a href="#">Xiaomi Redmi 8</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="topCatalogChild__item topCatalogChild__item--hasChild">
+										<a href="#" class="topCatalogChild__name">Смартфони Xiaomi</a>
+										<button class="topCatalogMenu__arr open_child_child icon__right btn"></button>
+										<div class="topCatalogChild__list">
+											<ul>
+												<li>
+													<a href="#">Xiaomi Redmi 8</a>
+												</li>
+												<li>
+													<a href="#">Xiaomi Redmi 8</a>
+												</li>
+												<li>
+													<a href="#">Xiaomi Redmi 8</a>
+												</li>
+												<li>
+													<a href="#">Xiaomi Redmi 8</a>
+												</li>
+												<li>
+													<a href="#">Xiaomi Redmi 8</a>
+												</li>
+												<li>
+													<a href="#">Xiaomi Redmi 8</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<div class="topCatalogMenu__ic">
+									<img src="img/icons/catalog/ic_4.svg" alt="">
+								</div>
+								<span class="topCatalogMenu__title">Навушники та гарнітури</span>
+								<button class="topCatalogMenu__arr open_catalog_child icon__right btn"></button>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="topCatalogMenu__ic">
+									<img src="img/icons/catalog/ic_5.svg" alt="">
+								</div>
+								<span class="topCatalogMenu__title">Портативні колонки</span>
+								<button class="topCatalogMenu__arr open_catalog_child icon__right btn"></button>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="topCatalogMenu__ic">
+									<img src="img/icons/catalog/ic_6.svg" alt="">
+								</div>
+								<span class="topCatalogMenu__title">Карти пам'яті</span>
+								<button class="topCatalogMenu__arr open_catalog_child icon__right btn"></button>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="topCatalogMenu__ic">
+									<img src="img/icons/catalog/ic_7.svg" alt="">
+								</div>
+								<span class="topCatalogMenu__title">Моноподи</span>
+								<button class="topCatalogMenu__arr open_catalog_child icon__right btn"></button>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="topCatalogMenu__ic">
+									<img src="img/icons/catalog/ic_8-1.svg" alt="">
+								</div>
+								<span class="topCatalogMenu__title">Телефони, Смартфони</span>
+								<button class="topCatalogMenu__arr open_catalog_child icon__right btn"></button>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="topCatalogMenu__ic">
+									<img src="img/icons/catalog/ic_8.svg" alt="">
+								</div>
+								<span class="topCatalogMenu__title">Планшети</span>
+								<button class="topCatalogMenu__arr open_catalog_child icon__right btn"></button>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="topCatalogMenu__ic">
+									<img src="img/icons/catalog/ic_9.svg" alt="">
+								</div>
+								<span class="topCatalogMenu__title">Гаджети</span>
+								<button class="topCatalogMenu__arr open_catalog_child icon__right btn"></button>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>	
+
+
+
+
+		<!-- преимущества -->
+		<div class="topFeatures">
+			<div class="topFeatures__item">
+				<div class="topFeatures__thumb">
+					<img src="img/icons/features/ic_1.svg" alt="">
+				</div>
+				<div class="topFeatures__title topFeatures__title--short">Швидка доставка</div>
+			</div>
+			<div class="topFeatures__item">
+				<div class="topFeatures__thumb">
+					<img src="img/icons/features/ic_2.svg" alt="">
+				</div>
+				<div class="topFeatures__title topFeatures__title--short">Кешбек</div>
+			</div>
+			<div class="topFeatures__item">
+				<div class="topFeatures__thumb">
+					<img src="img/icons/features/ic_3.svg" alt="">
+				</div>
+				<div class="topFeatures__title topFeatures__title--short">Дисконтна програма</div>
+			</div>
+			<div class="topFeatures__item">
+				<div class="topFeatures__thumb">
+					<img src="img/icons/features/ic_4.svg" alt="">
+				</div>
+				<div class="topFeatures__title topFeatures__title--short">Неймовірні знижки</div>
+			</div>
+			<div class="topFeatures__item">
+				<div class="topFeatures__thumb">
+					<img src="img/icons/features/ic_5.svg" alt="">
+				</div>
+				<div class="topFeatures__title topFeatures__title--short">Кредити 0% онлайн</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="breadcrumbs container">
+		<ul>
+			<li class="breadcrumbs__from icon__right">
+				<a href="#">Головна</a>
+			</li>
+			<li class="breadcrumbs__to">
+				<a href="#">Программа лояльности</a>
+			</li>
+		</ul>
+	</section>
+
+
+
+	<div class="info inner container"> 
+
+		
+
+		<div class="content">
+
+			<!-- if left -->
+			<aside class="sidebar sidebar--account left">
+				<nav class="accountNav infoNav dropdown icon__right">
+					<div class="dropdown__title">Программа лояльности</div>
+					<ul class="dropdown__list">
+
+						<li class="infoNav__title">Допомога</li>
+						<li class="accountNav__link">
+							<a class="" href="info.html">Доставка</a>
+						</li>
+						<li class="accountNav__link">
+							<a class="" href="info.html">Повернення та обмін</a>
+						</li>
+						<li class="accountNav__link">
+							<a class="" href="info.html">Оплата та кредит</a>
+						</li>
+						<li class="accountNav__link accountNav__link--active">
+							<a class="" href="program.html">Программа лояльности</a>
+						</li>
+
+						<li class="infoNav__title">Про компанію</li>
+						<li class="accountNav__link">
+							<a class="" href="info.html">Новини</a>
+						</li>
+						<li class="accountNav__link">
+							<a class="" href="reviews.html">Відгуки про компанію</a>
+						</li>
+						<li class="accountNav__link">
+							<a class="" href="info.html">Публічна оферта</a>
+						</li>
+						<li class="accountNav__link">
+							<a class="" href="blog.html">Блог</a>
+						</li>
+						<li class="accountNav__link">
+							<a class="" href="actions.html">Акции</a>
+						</li>
+					</ul>
+				</nav>
+			</aside>
+
+			<main class="main main--left">
+				<h1>Программа лояльности</h1>
+				<div class="info__content">
+					<div class="programLoyality">
+						<p>Абсолютно все наши зарегистрированные покупатели принимают участие в дисконтной программе. 
+						Ее правила очень просты - чем больше общая сумма покупок, тем больше ваша скидка!</p>
+						<div class="programLoyality__imgs">
+							<img src="img/image65.png" alt="">
+							<img src="img/chudik2.png" alt="">
+						</div>
+						<div class="info__subtitle">Важные моменты:</div>
+						<ul>
+							<li>- Скидка насчитывается на каждую последующую покупку после доставки и оплаты первой (предыдущей)!</li>
+							<li>- Скидка не распространяется на товары, стоимость которых уже снижена.</li>
+						</ul>
+						<div class="info__subtitle">Схема работы дисконтной программы</div>
+						<p>Ваша скидка автоматически рассчитывается на основе доставленных и оплаченных заказов, оформленных через сайт, и отображается непосредственно в карточке товара.</p>
+						<div class="programLoyality__banner">
+							<a href="#">
+								<img src="img/image66.png" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</main>
+
+
+		</div>
+
+
+	</div>
+
+
+
+	<footer class="footer">
+		<div class="footer__inner container">
+
+			<div class="footer__left">
+				<div class="footer__info">
+					<a class="footer__logo" href="/">
+						<img src="img/logo.svg" alt="">
+					</a>
+					<div class="footer__slogan footer__slogan--short">
+						<p>Сучасний магазин електроніки і аксесуарів в Україні</p>
+					</div>
+					<div class="footer__pay">
+						<img src="img/footer/mastercard-logo.svg" alt="">
+						<img src="img/footer/visa-logo.svg" alt="">
+					</div>
+					<div class="footer__copy">
+						<p>© 2006-2020, інтернет-магазин Tobi Mobi </p>
+					</div>
+				</div>
+				<img src="img/chudik.svg" class="footer__img" alt="">
+			</div>
+
+			<div class="footer__right">
+				<div class="footer__lists">
+					<div class="footer__list">
+						<div class="footer__title">Допомога</div>
+						<ul>
+							<li>
+								<a href="">Доставка</a>
+							</li>
+							<li>
+								<a href="">Повернення та обмін</a>
+							</li>
+							<li>
+								<a href="">Оплата та кредит</a>
+							</li>
+							<li>
+								<a href="">Дисконтна програма</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__list">
+						<div class="footer__title">Про компанію</div>
+						<ul>
+							<li>
+								<a href="">Новини</a>
+							</li>
+							<li>
+								<a href="">Відгуки про компанію</a>
+							</li>
+							<li>
+								<a href="">Публічна оферта</a>
+							</li>
+							<li>
+								<a href="">Блог</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__list footer__list--double"> 
+						<div class="footer__title">Бренди</div>
+						<ul>
+							<li>
+								<a href="">Apple</a>
+							</li>
+							<li>
+								<a href="">Xiaomi</a>
+							</li>
+							<li>
+								<a href="">Huawei</a>
+							</li>
+							<li>
+								<a href="">Asus</a>
+							</li>
+							<li>
+								<a href="">Lenovo</a>
+							</li>
+							<li>
+								<a href="">Vivo</a>
+							</li>
+							<li>
+								<a href="">Nokia</a>
+							</li>
+							<li>
+								<a href="">Oppo</a>
+							</li>
+						</ul>
+					</div>
+					<img src="img/chudik.svg" class="footer__imgMob" alt="">
+				</div>
+				<div class="footer__social">
+					<span>Для зв'язку з нами:</span>
+					<div class="header__soc footer__soc">
+						<ul>
+							<li>
+								<a href="#" target="_blank" class="icon__tel"></a>
+							</li>
+							<li>
+								<a href="#" target="_blank" class="icon__vib"></a>
+							</li>
+							<li>
+								<a href="#" target="_blank" class="icon__ig"></a>
+							</li>
+							<li>
+								<a href="#" target="_blank" class="icon__fb"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+
+
+
+
+
+
+
+	<!-- мобильное меню -->
+	<div class="mobMenu">
+		<div class="mobMenu__top">
+			<a href="/" class="mobMenu__logo">
+				<img src="img/logo_mobile.svg" alt="">
+			</a>
+			<div class="mobMenu__langs">
+				<ul>
+					<li class="header__langActive">
+						<a href="#">УКР</a>
+					</li>
+					<li>
+						<a href="#">РУС</a>
+					</li>
+				</ul>
+			</div>
+			<button class="mobMenu__close icon__close close btn" id="mobile_menu_close"></button>
+		</div>
+		<div class="mobMenu__inner scroll">
+			<button class="mobMenu__cat open_catalog btn cursor">Каталог товарів</button>
+			<ul class="mobMenuAcc">
+				<li class="mobMenuAcc__link mobMenuAcc__link--prof">
+					<a class="icon__ava" href="#">Профіль</a>
+				</li>
+				<li class="mobMenuAcc__link mobMenuAcc__link--ord">
+					<a class="icon__orders" href="#">Мої замовлення</a>
+				</li>
+				<li class="mobMenuAcc__link mobMenuAcc__link--wish">
+					<a class="icon__heart" href="#">Список бажаннь</a>
+				</li>
+				<li class="mobMenuAcc__link mobMenuAcc__link--prog">
+					<a class="icon__loyalty" href="#">Програма лояльності</a>
+				</li>
+				<li class="mobMenuAcc__link mobMenuAcc__link--cash">
+					<a class="icon__cashback" href="#">Кешбек</a>
+				</li>
+			</ul>
+			<div class="mobMenuSocial">
+				<span class="mobMenuSocial__title">Ми на зв’язку:</span>
+				<ul class="mobMenuSocial__links">
+					<li>
+						<a href="#" target="_blank" class="icon__tel"></a>
+					</li>
+					<li>
+						<a href="#" target="_blank" class="icon__vib"></a>
+					</li>
+					<li>
+						<a href="#" target="_blank" class="icon__ig"></a>
+					</li>
+					<li>
+						<a href="#" target="_blank" class="icon__fb"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="mobMenuLinks">
+				<div class="mobMenuLinks__title">Допомога</div>
+				<ul class="mobMenuLinks__list">
+					<li>
+						<a href="#">Доставка</a>
+					</li>
+					<li>
+						<a href="#">Повернення та обмін</a>
+					</li>
+					<li>
+						<a href="#">Оплата та кредит</a>
+					</li>
+					<li>
+						<a href="#">Дисконтна програма</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mobMenuLinks">
+				<div class="mobMenuLinks__title">Про компанію</div>
+				<ul class="mobMenuLinks__list">
+					<li>
+						<a href="#">Новини</a>
+					</li>
+					<li>
+						<a href="#">Відгуки про компанію</a>
+					</li>
+					<li>
+						<a href="#">Публічна оферта</a>
+					</li>
+					<li>
+						<a href="#">Блог</a>
+					</li>
+				</ul>
+			</div> 
+			<div class="mobMenuLinks">
+				<div class="mobMenuLinks__title">Бренди</div>
+				<ul class="mobMenuLinks__list">
+					<li>
+						<a href="#">Apple</a>
+					</li>
+					<li>
+						<a href="#">Xiaomi</a>
+					</li>
+					<li>
+						<a href="#">Huawei</a>
+					</li>
+					<li>
+						<a href="#">Asus</a>
+					</li>
+					<li>
+						<a href="#">Lenovo</a>
+					</li>
+					<li>
+						<a href="#">Vivo</a>
+					</li>
+					<li>
+						<a href="#">Nokia</a>
+					</li>
+					<li>
+						<a href="#">Oppo</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal modalCart" id="modal_cart">
+		<div class="modal__win">
+			<button class="close_modal_cart modal__close icon__close close btn"></button>
+
+			<div class="modalCart__title icon__cartFull">Кошик</div>
+
+			<div class="modalCart__inner scroll">
+
+				<div class="modalCart__item">
+					<button class="modalCart__del icon__trash btn cursor"></button>
+					<div class="modalCart__thumb">
+						<img src="img/cart_popup/Image.png" alt="">
+					</div>
+					<div class="modalCart__info">
+						<a href="#" class="modalCart__name">Мобільний телефон Apple iPhone SE 64GB (2020) White</a>
+						<div class="modalCart__dis">
+							<div class="modalCart__perc">-13%</div>
+							<div class="modalCart__spec">16 499</div>
+						</div>
+						<div class="modalCart__price">14 499 грн</div>
+					</div>
+					<div class="modalCart__itemAll">
+						<div class="modalCart__calc quantly">
+							<form action="#">
+								<button type="button" class="btn cursor minus"></button>
+								<input type="text" data-step="1" name="quantly" value="1">
+								<button type="button" class="btn cursor plus"></button>
+							</form>
+						</div>
+						<div class="modalCart__Alltotal">14 499 грн</div>
+					</div>
+				</div>
+
+				<div class="modalCart__item">
+					<button class="modalCart__del icon__trash btn cursor"></button>
+					<div class="modalCart__thumb">
+						<img src="img/cart_popup/Image1.png" alt="">
+					</div>
+					<div class="modalCart__info">
+						<a href="#" class="modalCart__name">Мобільний телефон Apple iPhone SE 64GB (2020) White</a>
+						<div class="modalCart__dis">
+							<div class="modalCart__perc">-13%</div>
+							<div class="modalCart__spec">16 499</div>
+						</div>
+						<div class="modalCart__price">14 499 грн</div>
+					</div>
+					<div class="modalCart__itemAll">
+						<div class="modalCart__calc quantly">
+							<form action="#">
+								<button type="button" class="btn cursor minus"></button>
+								<input type="text" data-step="1" name="quantly" value="1">
+								<button type="button" class="btn cursor plus"></button>
+							</form>
+						</div>
+						<div class="modalCart__Alltotal">14 499 грн</div>
+					</div>
+				</div>
+
+				<div class="modalCart__item">
+					<button class="modalCart__del icon__trash btn cursor"></button>
+					<div class="modalCart__thumb">
+						<img src="img/cart_popup/Image.png" alt="">
+					</div>
+					<div class="modalCart__info">
+						<a href="#" class="modalCart__name">Мобільний телефон Apple iPhone SE 64GB (2020) White</a>
+						<div class="modalCart__dis">
+							<div class="modalCart__perc">-13%</div>
+							<div class="modalCart__spec">16 499</div>
+						</div>
+						<div class="modalCart__price">14 499 грн</div>
+					</div>
+					<div class="modalCart__itemAll">
+						<div class="modalCart__calc quantly">
+							<form action="#">
+								<button type="button" class="btn cursor minus"></button>
+								<input type="text" data-step="1" name="quantly" value="1">
+								<button type="button" class="btn cursor plus"></button>
+							</form>
+						</div>
+						<div class="modalCart__Alltotal">14 499 грн</div>
+					</div>
+				</div>
+
+				<div class="modalCart__item">
+					<button class="modalCart__del icon__trash btn cursor"></button>
+					<div class="modalCart__thumb">
+						<img src="img/cart_popup/Image1.png" alt="">
+					</div>
+					<div class="modalCart__info">
+						<a href="#" class="modalCart__name">Мобільний телефон Apple iPhone SE 64GB (2020) White</a>
+						<div class="modalCart__dis">
+							<div class="modalCart__perc">-13%</div>
+							<div class="modalCart__spec">16 499</div>
+						</div>
+						<div class="modalCart__price">14 499 грн</div>
+					</div>
+					<div class="modalCart__itemAll">
+						<div class="modalCart__calc quantly">
+							<form action="#">
+								<button type="button" class="btn cursor minus"></button>
+								<input type="text" data-step="1" name="quantly" value="1">
+								<button type="button" class="btn cursor plus"></button>
+							</form>
+						</div>
+						<div class="modalCart__Alltotal">14 499 грн</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="modalCart__total">
+				<div class="modalCart__totalLabel">Всього:</div>
+				<div class="modalCart__totalVal">24 498 грн</div>
+			</div>
+
+			<div class="modalCart__nav">
+				<button class="btn close_modal_cart modalCart__continue">Продовжити покупки</button>
+				<a href="/checkout" class="modalCart__checkout btn btn--yellow">Оформити замовлення</a>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- popup авторизация -->
+	<div class="modal modalAuth modalLogin" id="modal_login">
+		<div class="modal__win">
+			<button class="close_modal_login modal__close icon__close close btn"></button>
+			<div class="modalLogin__title">Вход</div>
+			<div class="modalLogin__msg modalLogin__msg">Для входа введите электронную почту
+			и пароль</div>
+			<form class="modalLogin__form">
+				<div class="modalLogin__row">
+					<input type="email" name="email" class="input modalLogin_required" placeholder="Email">
+				</div>
+				<div class="modalLogin__row">
+					<input type="password" name="password" class="input modalLogin_required" placeholder="Пароль">
+					<button class="btn modalLogin__showPass icon__eye"></button>
+				</div>
+				<button type="button" class="btn modalLogin__forgot open_modal_recovery">Забыли пароль?</button>
+				<button type="button" class="modalLogin__submit headerCart__checkout btn btn--yellow">Войти</button>
+			</form>
+			<button class="btn modalLogin__supBtn modalLogin__forgot open_modal_register">Зарегистрироваться</button>
+			<div class="modalLoginSocial">
+				<div class="modalLoginSocial__title">Войти как пользователь</div>
+				<a href="#" class="btn btn--blue modalLoginSocial__facebook">Facebook</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- popup регистрация -->
+	<div class="modal modalRegister modalLogin" id="modal_register">
+		<div class="modal__win">
+			<button class="close_modal_register modal__close icon__close close btn"></button>
+			<div class="modalLogin__title">Регистрация</div>
+			<div class="modalLogin__msg modalLogin__msg">Введите ваши контактные данные</div>
+			<form class="modalLogin__form">
+				<div class="modalLogin__row">
+					<input type="text" name="name" class="input modalLogin_required" placeholder="Имя*">
+				</div>
+				<div class="modalLogin__row">
+					<input type="text" name="phone" class="input modalLogin_required" placeholder="Номер телефона*">
+				</div>
+				<div class="modalLogin__row">
+					<input type="text" name="email" class="input modalLogin_required" placeholder="Email">
+				</div>
+				<div class="modalLogin__row">
+					<input type="password" name="password" class="input" placeholder="Пароль">
+					<button class="btn modalLogin__showPass icon__eye"></button>
+				</div>
+				<div class="modalLogin__row">
+					<input type="password" name="password_repeat" class="input" placeholder="Повторите пароль*">
+					<button class="btn modalLogin__showPass icon__eye"></button>
+				</div>
+				<button type="button" class="modalLogin__submit modalLogin__register headerCart__checkout btn btn--yellow">Зарегистрироваться</button>
+				<button type="button" class="open_modal_login btn modalLogin__auth modalLogin__forgot">Войти</button>
+			</form>
+			<div class="modalLogin__comm">Регистрируясь, вы соглашаетесь с
+			пользовательским соглашением</div>
+		</div>
+	</div>
+
+	<!-- popup сброс пароля -->
+	<div class="modal modalRecovery modalLogin" id="modal_recovery">
+		<div class="modal__win">
+			<button class="close_modal_recovery modal__close icon__close close btn"></button>
+			<div class="modalLogin__title">Сброс пароля</div>
+			<div class="modalLogin__msg modalLogin__msg">Вам на почту будет отправленно письмо
+			с сылкой для сброса пароля</div>
+			<form class="modalLogin__form">
+				<div class="modalLogin__row">
+					<input type="text" name="email" class="input modalLogin_required" placeholder="Email">
+				</div>
+				<div class="modalLogin__repeatSend">
+					<span>Не пришло письмо?</span>
+					<button type="button" class="btn modalLogin__forgot">Повторить отправку</button>
+				</div>
+				<button type="button" class="modalLogin__submit modalLogin__register headerCart__checkout btn btn--yellow">Отправить</button>
+				<button type="button" class="open_modal_register btn modalLogin__auth modalLogin__forgot">Зарегистрироваться</button>
+			</form>
+			<div class="modalLoginSocial">
+				<div class="modalLoginSocial__title">Войти как пользователь</div>
+				<a href="#" class="btn btn--blue modalLoginSocial__facebook">Facebook</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- popup изменение пароля -->
+	<div class="modal modalPassChange modalLogin" id="modal_change">
+		<div class="modal__win">
+			<button class="close_modal_change modal__close icon__close close btn"></button>
+			<div class="modalLogin__title">Изменение пароля</div>
+			<div class="modalLogin__msg modalLogin__msg">Пароль должен быть не менение 8 символов 
+			из заглавных и строчных букв, цифр.</div>
+			<form class="modalLogin__form">
+				<div class="modalLogin__row">
+					<input type="password" name="password" class="input modalLogin_required" placeholder="Новый пароль">
+					<button class="btn modalLogin__showPass icon__eye"></button>
+				</div>
+				<div class="modalLogin__row">
+					<input type="password" name="password_repeat" class="input modalLogin_required" placeholder="Повторите пароль">
+					<button class="btn modalLogin__showPass icon__eye"></button>
+				</div>
+				<button type="button" class="modalLogin__submit modalLogin__register headerCart__checkout btn btn--yellow">Сохранить</button>
+				<button type="button" class="open_modal_register btn modalLogin__auth modalLogin__forgot">Зарегистрироваться</button>
+			</form>
+			<div class="modalLoginSocial">
+				<div class="modalLoginSocial__title">Войти как пользователь</div>
+				<a href="#" class="btn btn--blue modalLoginSocial__facebook">Facebook</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- popup успешная регистрация -->
+	<div class="modal modalRegSuccess modalLogin" id="modal_reg_success">
+		<div class="modal__win">
+			<button class="close_modal_reg_success modal__close icon__close close btn"></button>
+			<div class="modalLogin__title">Спасибо за регистрацию!</div>
+			<div class="modalLogin__msg modalLogin__msg">Вам на почту будет отправленно письмо
+			с сылкой для подтверждения регистрации.</div>
+			<div class="modalLogin__repeatSend">
+				<span>Не пришло письмо?</span>
+				<button class="btn modalLogin__forgot">Повторить отправку</button>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="libs/jquery/jquery-3.5.1.min.js"></script>
+	<script src="libs/slick/slick.min.js"></script>
+
+	<script src="js/main.min.js"></script>
+
+</body>
+</html>
